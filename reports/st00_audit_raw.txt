@@ -1,0 +1,151 @@
+﻿======================================================================
+screw_bag -> data\raw\mvtec_loco\screw_bag
+screw_bag/  [{'.json': 1, '.txt': 2}]
+  ground_truth/
+    logical_anomalies/
+      000/  [{'.png': 1}]
+      001/  [{'.png': 1}]
+      002/  [{'.png': 1}]
+      003/  [{'.png': 1}]
+      004/  [{'.png': 1}]
+      005/  [{'.png': 1}]
+      ... 131 more subdirs
+    structural_anomalies/
+      000/  [{'.png': 1}]
+      001/  [{'.png': 1}]
+      002/  [{'.png': 1}]
+      003/  [{'.png': 1}]
+      004/  [{'.png': 1}]
+      005/  [{'.png': 1}]
+      ... 76 more subdirs
+  test/
+    good/  [{'.png': 122}]
+    logical_anomalies/  [{'.png': 137}]
+    structural_anomalies/  [{'.png': 82}]
+  train/
+    good/  [{'.png': 360}]
+  validation/
+    good/  [{'.png': 60}]
+
+Image counts:
+  train/good: 360
+  validation/good: 60
+  test/good: 122
+  test/logical_anomalies: 137
+  test/structural_anomalies: 82
+  ground_truth/logical_anomalies: 161
+  ground_truth/structural_anomalies: 82
+
+Train image sizes (sample): {(1600, 1100): 49}
+Train image modes (sample): {'RGB': 49}
+
+Non-image files (annotation/metadata candidates):
+   defects_config.json
+     preview: [
+ {
+  "defect_name": "screw_too_long",
+  "pixel_value": 255,
+  "saturation_threshold": 9000,
+  "relative_saturation": false
+ },
+ {
+  "defect_name": "screw_too_short",
+  "pixel_value": 254,
+  "saturation_threshold": 9000,
+  "relative_saturation": false
+ },
+ {
+  "defect_name": "1_very_short_screw",
+  "pixel_value": 253,
+  "saturation_threshold": 1.0,
+  "relative_saturation": true
+ },
+ {
+  "defect_name": "2_very_short_screws",
+  "pixel_value": 252,
+  "saturation_threshold": 18000,
+  "relative_saturation": false
+ },
+ {
+  "defect_name": "1_additional_long_screw",
+  "pixel_value": 251,
+  "saturatio
+   license.txt
+   readme.txt
+
+Sample mask: ground_truth\logical_anomalies\000\000.png (1600, 1100) L
+======================================================================
+splicing_connectors -> data\raw\mvtec_loco\splicing_connectors
+splicing_connectors/  [{'.json': 1, '.txt': 2}]
+  ground_truth/
+    logical_anomalies/
+      000/  [{'.png': 1}]
+      001/  [{'.png': 1}]
+      002/  [{'.png': 1}]
+      003/  [{'.png': 1}]
+      004/  [{'.png': 1}]
+      005/  [{'.png': 1}]
+      ... 102 more subdirs
+    structural_anomalies/
+      000/  [{'.png': 1}]
+      001/  [{'.png': 1}]
+      002/  [{'.png': 1}]
+      003/  [{'.png': 1}]
+      004/  [{'.png': 1}]
+      005/  [{'.png': 1}]
+      ... 79 more subdirs
+  test/
+    good/  [{'.png': 119}]
+    logical_anomalies/  [{'.png': 108}]
+    structural_anomalies/  [{'.png': 85}]
+  train/
+    good/  [{'.png': 360}]
+  validation/
+    good/  [{'.png': 60}]
+
+Image counts:
+  train/good: 360
+  validation/good: 60
+  test/good: 119
+  test/logical_anomalies: 108
+  test/structural_anomalies: 85
+  ground_truth/logical_anomalies: 108
+  ground_truth/structural_anomalies: 85
+
+Train image sizes (sample): {(1700, 850): 49}
+Train image modes (sample): {'RGB': 49}
+
+Non-image files (annotation/metadata candidates):
+   defects_config.json
+     preview: [
+ {
+  "defect_name": "wrong_connector_type_5_2",
+  "pixel_value": 255,
+  "saturation_threshold": 67100,
+  "relative_saturation": false
+ },
+ {
+  "defect_name": "wrong_connector_type_5_3",
+  "pixel_value": 254,
+  "saturation_threshold": 44300,
+  "relative_saturation": false
+ },
+ {
+  "defect_name": "wrong_connector_type_3_2",
+  "pixel_value": 253,
+  "saturation_threshold": 22100,
+  "relative_saturation": false
+ },
+ {
+  "defect_name": "cable_too_short_T2",
+  "pixel_value": 252,
+  "saturation_threshold": 53300,
+  "relative_saturation": false
+ },
+ {
+  "defect_name": "cable_too_short_T3",
+  "pixel_v
+   license.txt
+   readme.txt
+
+Sample mask: ground_truth\logical_anomalies\000\000.png (1700, 850) L

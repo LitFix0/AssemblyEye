@@ -1,0 +1,13 @@
+product: screw_bag
+version: "0.1-placeholder"
+description: >
+  ST-01 placeholder spec. Counts are inferred from MVTec defect names and a few
+  viewed normal images; verify in ST-02. Thresholds are untuned placeholders.
+thresholds:
+  accept_conf: 0.60
+  review_conf: 0.30
+required_counts:
+  screw_long: 1
+  screw_short: 1
+  nut: 2
+  washer: 2

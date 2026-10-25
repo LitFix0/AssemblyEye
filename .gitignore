@@ -1,0 +1,45 @@
+# Python environment and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Secrets
+.env
+*.key
+
+# Dataset (large, non-commercial licence, never commit)
+data/raw/
+data/processed/
+*.tar.xz
+*.zip
+
+# Model weights and training runs (document provenance in models/README.md instead)
+models/*
+!models/README.md
+runs/
+*.pt
+*.pth
+*.onnx
+
+# Generated images that contain dataset content
+reports/samples/
+reports/samples_labeled/
+reports/baseline/
+reports/grid.png
+reports/*.tmp
+
+# Frontend
+node_modules/
+frontend/dist/
+
+# Local database and uploads (later threads)
+*.db
+*.sqlite3
+uploads/
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db

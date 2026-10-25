@@ -1,0 +1,30 @@
+﻿
+screw_bag/logical_anomalies
+  test images: 137 | mask dirs: 137
+  test images without mask dir: []
+  mask dirs without test image: []
+  masks-per-image histogram: {1: 113, 2: 24}
+  pixel values (masks containing each): {0: 161, 240: 6, 241: 12, 242: 6, 243: 12, 244: 6, 245: 6, 246: 6, 247: 12, 248: 6, 249: 12, 250: 6, 251: 6, 252: 7, 253: 17, 254: 20, 255: 21}
+
+screw_bag/structural_anomalies
+  test images: 82 | mask dirs: 82
+  test images without mask dir: []
+  mask dirs without test image: []
+  masks-per-image histogram: {1: 82}
+  pixel values (masks containing each): {0: 82, 236: 25, 237: 25, 238: 16, 239: 16}
+
+splicing_connectors/logical_anomalies
+  test images: 108 | mask dirs: 108
+  test images without mask dir: []
+  mask dirs without test image: []
+  masks-per-image histogram: {1: 108}
+  pixel values (masks containing each): {0: 94, 240: 25, 243: 12, 245: 12, 246: 12, 247: 12, 248: 2, 249: 12, 250: 4, 251: 4, 252: 4, 253: 3, 254: 2, 255: 4}
+
+splicing_connectors/structural_anomalies
+  test images: 85 | mask dirs: 85
+  test images without mask dir: []
+  mask dirs without test image: []
+  masks-per-image histogram: {1: 85}
+  pixel values (masks containing each): {0: 85, 235: 11, 236: 11, 237: 12, 238: 12, 239: 12, 241: 6, 242: 9, 244: 12}
+
+Contact sheets written to reports\samples
