@@ -1,0 +1,10 @@
+{
+  "detections": [
+    {"class_name": "screw_long",  "confidence": 0.95, "bbox": {"x1": 510, "y1": 420, "x2": 940, "y2": 605}},
+    {"class_name": "screw_short", "confidence": 0.93, "bbox": {"x1": 710, "y1": 500, "x2": 1000, "y2": 645}},
+    {"class_name": "nut",         "confidence": 0.91, "bbox": {"x1": 900, "y1": 308, "x2": 995, "y2": 415}},
+    {"class_name": "nut",         "confidence": 0.90, "bbox": {"x1": 1005, "y1": 310, "x2": 1125, "y2": 430}},
+    {"class_name": "washer",      "confidence": 0.92, "bbox": {"x1": 770, "y1": 323, "x2": 892, "y2": 442}},
+    {"class_name": "washer",      "confidence": 0.89, "bbox": {"x1": 409, "y1": 525, "x2": 530, "y2": 645}}
+  ]
+}
