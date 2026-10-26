@@ -43,3 +43,7 @@ uploads/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Annotation workspace: images are dataset content; labels + manifest are tracked
+data/annotation/*/images/
+.venv-labeling/

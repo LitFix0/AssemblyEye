@@ -1,0 +1,10 @@
+screw_bag:
+  - screw_long
+  - screw_short
+  - nut
+  - washer
+splicing_connectors:
+  - connector_2
+  - connector_3
+  - connector_5
+  - cable

@@ -1,0 +1,4 @@
+screw_long
+screw_short
+nut
+washer

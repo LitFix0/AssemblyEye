@@ -1,0 +1,55 @@
+﻿screw_bag
+  test/good: 122
+  test/logical_anomalies: 137
+  test/structural_anomalies: 82
+  train/good: 360
+  validation/good: 60
+  mask files: 243
+    1_additional_long_screw: 6 image(s)
+    1_additional_nut: 12 image(s)
+    1_additional_short_screw: 6 image(s)
+    1_additional_washer: 12 image(s)
+    1_missing_long_screw: 6 image(s)
+    1_missing_nut: 12 image(s)
+    1_missing_short_screw: 6 image(s)
+    1_missing_washer: 12 image(s)
+    1_very_short_screw: 17 image(s)
+    2_additional_nuts: 6 image(s)
+    2_additional_washers: 6 image(s)
+    2_missing_nuts: 6 image(s)
+    2_missing_washers: 6 image(s)
+    2_very_short_screws: 7 image(s)
+    bag_broken: 16 image(s)
+    color: 16 image(s)
+    contamination: 25 image(s)
+    part_broken: 25 image(s)
+    screw_too_long: 21 image(s)
+    screw_too_short: 20 image(s)
+splicing_connectors
+  test/good: 119
+  test/logical_anomalies: 108
+  test/structural_anomalies: 85
+  train/good: 360
+  validation/good: 60
+  mask files: 193
+    broken_cable: 12 image(s)
+    broken_connector: 12 image(s)
+    cable_color: 12 image(s)
+    cable_cut: 12 image(s)
+    cable_not_plugged: 9 image(s)
+    cable_too_short_T2: 4 image(s)
+    cable_too_short_T3: 4 image(s)
+    cable_too_short_T5: 4 image(s)
+    color: 11 image(s)
+    contamination: 11 image(s)
+    extra_cable: 12 image(s)
+    flipped_connector: 12 image(s)
+    missing_cable: 12 image(s)
+    missing_connector: 12 image(s)
+    missing_connector_and_cable: 2 image(s)
+    open_lever: 12 image(s)
+    unknown_cable_color: 6 image(s)
+    wrong_cable_location: 25 image(s)
+    wrong_connector_type_3_2: 3 image(s)
+    wrong_connector_type_5_2: 4 image(s)
+    wrong_connector_type_5_3: 2 image(s)
