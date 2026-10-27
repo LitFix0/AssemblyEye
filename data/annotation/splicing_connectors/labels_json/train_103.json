@@ -1,45 +1,9 @@
 {
   "version": "7.9.1",
   "flags": {
-    "needs_review": true
+    "needs_review": false
   },
   "shapes": [
-    {
-      "label": "connector_5",
-      "points": [
-        [
-          251.68655395507812,
-          162.50320434570312
-        ],
-        [
-          564.6341552734375,
-          621.5010375976562
-        ]
-      ],
-      "group_id": null,
-      "description": "draft conf=0.96",
-      "shape_type": "rectangle",
-      "flags": {},
-      "mask": null
-    },
-    {
-      "label": "connector_5",
-      "points": [
-        [
-          1186.6146240234375,
-          199.88795471191406
-        ],
-        [
-          1489.967529296875,
-          660.4175415039062
-        ]
-      ],
-      "group_id": null,
-      "description": "draft conf=0.94",
-      "shape_type": "rectangle",
-      "flags": {},
-      "mask": null
-    },
     {
       "label": "cable",
       "points": [
@@ -55,6 +19,66 @@
       "group_id": null,
       "description": "draft conf=0.40",
       "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "connector_5",
+      "points": [
+        [
+          281.4079422382672,
+          148.82671480144404
+        ],
+        [
+          572.0216606498195,
+          174.09747292418774
+        ],
+        [
+          516.0649819494585,
+          645.216606498195
+        ],
+        [
+          229.06137184115528,
+          647.0216606498195
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "connector_5",
+      "points": [
+        [
+          1200.1805054151625,
+          193.95306859205778
+        ],
+        [
+          1180.3249097472924,
+          652.4368231046931
+        ],
+        [
+          1479.9638989169675,
+          672.2924187725632
+        ],
+        [
+          1505.2346570397112,
+          195.75812274368235
+        ],
+        [
+          1182.129963898917,
+          186.7328519855596
+        ],
+        [
+          1183.9350180505417,
+          184.92779783393502
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
       "flags": {},
       "mask": null
     }

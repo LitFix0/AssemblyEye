@@ -1,27 +1,9 @@
 {
   "version": "7.9.1",
   "flags": {
-    "needs_review": true
+    "needs_review": false
   },
   "shapes": [
-    {
-      "label": "connector_2",
-      "points": [
-        [
-          92.87055969238281,
-          341.6202697753906
-        ],
-        [
-          383.4034118652344,
-          559.0071411132812
-        ]
-      ],
-      "group_id": null,
-      "description": "draft conf=0.91",
-      "shape_type": "rectangle",
-      "flags": {},
-      "mask": null
-    },
     {
       "label": "connector_2",
       "points": [
@@ -41,20 +23,58 @@
       "mask": null
     },
     {
-      "label": "cable",
+      "label": "connector_2",
       "points": [
         [
-          371.76983642578125,
-          370.5175476074219
+          106.31768953068598,
+          334.7472924187726
         ],
         [
-          1286.900634765625,
-          440.3547668457031
+          387.90613718411555,
+          336.5523465703971
+        ],
+        [
+          360.83032490974733,
+          578.4296028880867
+        ],
+        [
+          81.0469314079423,
+          547.7436823104692
         ]
       ],
       "group_id": null,
-      "description": "draft conf=0.27",
-      "shape_type": "rectangle",
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "cable",
+      "points": [
+        [
+          380.68592057761737,
+          399.72924187725636
+        ],
+        [
+          1037.725631768953,
+          376.2635379061372
+        ],
+        [
+          1279.6028880866427,
+          410.5595667870036
+        ],
+        [
+          1288.6281588447653,
+          453.8808664259928
+        ],
+        [
+          377.0758122743683,
+          446.6606498194946
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
       "flags": {},
       "mask": null
     }

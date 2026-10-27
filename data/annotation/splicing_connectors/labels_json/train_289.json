@@ -1,7 +1,7 @@
 {
   "version": "7.9.1",
   "flags": {
-    "needs_review": true
+    "needs_review": false
   },
   "shapes": [
     {
@@ -23,24 +23,6 @@
       "mask": null
     },
     {
-      "label": "connector_5",
-      "points": [
-        [
-          207.4043731689453,
-          254.90188598632812
-        ],
-        [
-          512.2876586914062,
-          712.08056640625
-        ]
-      ],
-      "group_id": null,
-      "description": "draft conf=0.96",
-      "shape_type": "rectangle",
-      "flags": {},
-      "mask": null
-    },
-    {
       "label": "cable",
       "points": [
         [
@@ -48,13 +30,39 @@
           620.4884033203125
         ],
         [
-          1221.3629150390625,
-          670.7122192382812
+          1220.0361010830325,
+          686.7328519855596
         ]
       ],
       "group_id": null,
       "description": "draft conf=0.47",
       "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "connector_5",
+      "points": [
+        [
+          230.86642599277982,
+          246.2996389891697
+        ],
+        [
+          519.6750902527076,
+          264.35018050541515
+        ],
+        [
+          474.5487364620939,
+          728.2490974729242
+        ],
+        [
+          189.3501805054152,
+          721.0288808664259
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
       "flags": {},
       "mask": null
     }

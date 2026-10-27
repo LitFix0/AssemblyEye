@@ -1,27 +1,9 @@
 {
   "version": "7.9.1",
   "flags": {
-    "needs_review": true
+    "needs_review": false
   },
   "shapes": [
-    {
-      "label": "connector_5",
-      "points": [
-        [
-          125.08702087402344,
-          121.171630859375
-        ],
-        [
-          425.4532775878906,
-          580.4723510742188
-        ]
-      ],
-      "group_id": null,
-      "description": "draft conf=0.93",
-      "shape_type": "rectangle",
-      "flags": {},
-      "mask": null
-    },
     {
       "label": "connector_5",
       "points": [
@@ -48,13 +30,39 @@
           489.1582336425781
         ],
         [
-          1253.5189208984375,
-          571.6687622070312
+          1252.5270758122745,
+          578.4296028880867
         ]
       ],
       "group_id": null,
       "description": "draft conf=0.48",
       "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "connector_5",
+      "points": [
+        [
+          137.0036101083033,
+          130.77617328519858
+        ],
+        [
+          427.6173285198556,
+          136.19133574007225
+        ],
+        [
+          405.95667870036107,
+          583.8447653429603
+        ],
+        [
+          124.36823104693147,
+          583.8447653429603
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
       "flags": {},
       "mask": null
     }
