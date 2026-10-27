@@ -47,3 +47,6 @@ Thumbs.db
 # Annotation workspace: images are dataset content; labels + manifest are tracked
 data/annotation/*/images/
 .venv-labeling/
+
+reports/label_checks/
+reports/predictions/
