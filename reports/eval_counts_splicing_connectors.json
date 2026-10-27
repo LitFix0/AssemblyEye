@@ -1,6 +1,6 @@
 {
   "category": "splicing_connectors",
-  "detector": "yolo:smoke_splicing_best.pt@197e11e04a99 imgsz=960 min_conf=0.1",
+  "detector": "yolo:splicing_v2_best.pt@76c47f1e0822 imgsz=960 min_conf=0.1",
   "n": 60,
   "seed": 42,
   "images": [
@@ -68,27 +68,35 @@
   "raw": [
     {
       "threshold": 0.2,
-      "exact": 42,
+      "exact": 43,
       "images": 60,
-      "exact_rate": 0.7,
-      "images_with_cross_class_overlap": 2,
-      "cross_class_pairs": 2
+      "exact_rate": 0.7166666666666667,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
     },
     {
       "threshold": 0.3,
-      "exact": 54,
+      "exact": 53,
       "images": 60,
-      "exact_rate": 0.9,
-      "images_with_cross_class_overlap": 2,
-      "cross_class_pairs": 2
+      "exact_rate": 0.8833333333333333,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
     },
     {
       "threshold": 0.4,
-      "exact": 37,
+      "exact": 57,
       "images": 60,
-      "exact_rate": 0.6166666666666667,
-      "images_with_cross_class_overlap": 1,
-      "cross_class_pairs": 1
+      "exact_rate": 0.95,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
+    },
+    {
+      "threshold": 0.5,
+      "exact": 21,
+      "images": 60,
+      "exact_rate": 0.35,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
     }
   ],
   "suppressed": [
@@ -102,48 +110,147 @@
     },
     {
       "threshold": 0.3,
-      "exact": 56,
+      "exact": 53,
       "images": 60,
-      "exact_rate": 0.9333333333333333,
+      "exact_rate": 0.8833333333333333,
       "images_with_cross_class_overlap": 0,
       "cross_class_pairs": 0
     },
     {
       "threshold": 0.4,
-      "exact": 38,
+      "exact": 57,
       "images": 60,
-      "exact_rate": 0.6333333333333333,
+      "exact_rate": 0.95,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
+    },
+    {
+      "threshold": 0.5,
+      "exact": 21,
+      "images": 60,
+      "exact_rate": 0.35,
       "images_with_cross_class_overlap": 0,
       "cross_class_pairs": 0
     }
   ],
-  "failures_at": 0.3,
+  "failures_at": 0.5,
   "failures": {
-    "337.png": {
-      "cable": 2,
+    "064.png": {
+      "connector_5": 2
+    },
+    "062.png": {
+      "connector_5": 2
+    },
+    "304.png": {
       "connector_3": 2
     },
+    "221.png": {
+      "connector_2": 2
+    },
+    "121.png": {
+      "connector_2": 2
+    },
+    "051.png": {
+      "connector_2": 2
+    },
+    "341.png": {
+      "connector_3": 2
+    },
+    "337.png": {
+      "connector_3": 2
+    },
+    "345.png": {
+      "connector_2": 2
+    },
+    "033.png": {
+      "connector_3": 2
+    },
+    "019.png": {
+      "connector_5": 2
+    },
+    "252.png": {
+      "connector_3": 2
+    },
+    "075.png": {
+      "connector_3": 2
+    },
+    "206.png": {
+      "connector_5": 2
+    },
+    "069.png": {
+      "connector_2": 2
+    },
+    "093.png": {
+      "connector_3": 2
+    },
+    "140.png": {
+      "connector_2": 2
+    },
+    "123.png": {
+      "connector_5": 2
+    },
+    "076.png": {
+      "connector_2": 2
+    },
     "306.png": {
-      "cable": 2,
+      "connector_3": 2
+    },
+    "268.png": {
+      "connector_5": 2
+    },
+    "014.png": {
+      "connector_5": 2
+    },
+    "352.png": {
       "connector_3": 2
     },
     "192.png": {
-      "cable": 1,
-      "connector_2": 1,
       "connector_3": 2
     },
-    "220.png": {
-      "cable": 2,
+    "336.png": {
+      "connector_3": 2
+    },
+    "000.png": {
+      "connector_2": 2
+    },
+    "112.png": {
+      "connector_3": 2
+    },
+    "238.png": {
+      "connector_2": 2
+    },
+    "215.png": {
+      "connector_3": 2
+    },
+    "322.png": {
+      "connector_5": 2
+    },
+    "332.png": {
+      "connector_2": 2
+    },
+    "311.png": {
+      "connector_3": 2
+    },
+    "063.png": {
+      "connector_2": 2
+    },
+    "181.png": {
+      "connector_2": 2
+    },
+    "006.png": {
+      "connector_2": 2
+    },
+    "071.png": {
       "connector_2": 2
     },
     "228.png": {
-      "cable": 1,
-      "connector_2": 1,
       "connector_3": 2
     },
-    "128.png": {
-      "cable": 2,
+    "200.png": {
       "connector_2": 2
+    },
+    "281.png": {
+      "connector_3": 2
     }
   }
 }

@@ -67,7 +67,7 @@ def main(argv=None) -> int:
     for name, c in list(failures.items())[:args.worst]:
         print(f"  {name}: {c}")
 
-    out = Path("reports") / f"eval_counts_{args.category}.json"
+        out = Path("reports") / f"eval_counts_{args.category}_{Path(args.weights).stem}.json"
     out.parent.mkdir(exist_ok=True)
     out.write_text(json.dumps({"category": args.category, "detector": detector.name, "n": len(dev),
                                "seed": args.seed, "images": [s.rel_path for s in dev],
