@@ -199,3 +199,16 @@ def test_export_rejects_leaky_manifest(cat_dir, tmp_path):
     (cat_dir / "manifest.csv").write_text(text)
     with pytest.raises(LeakageError):
         export_yolo(cat_dir, CLASSES, tmp_path / "out")
+
+def test_unreviewed_drafts_are_skipped_and_reported(cat_dir, tmp_path):
+    label_all(cat_dir)
+    p = cat_dir / "labels_json" / "train_000.json"
+    data = json.loads(p.read_text())
+    data["flags"] = {"needs_review": True}
+    p.write_text(json.dumps(data))
+    rep = export_yolo(cat_dir, CLASSES, tmp_path / "out", seed=3)
+    assert rep["unreviewed"] == ["train_000.png"]
+    assert rep["images"]["train"] + rep["images"]["val"] == 7  # 8 in the pool, minus the draft
+    data["flags"] = {"needs_review": False}
+    p.write_text(json.dumps(data))
+    assert export_yolo(cat_dir, CLASSES, tmp_path / "out2", seed=3)["unreviewed"] == []

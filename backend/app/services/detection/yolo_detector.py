@@ -50,9 +50,15 @@ class YoloDetector:
         self._model = YOLO(str(self.weights))
 
     @property
+    
     def name(self) -> str:
         return (f"yolo:{self.weights.name}@{self.fingerprint} "
                 f"imgsz={self.imgsz} min_conf={self.min_conf}")
+    @property
+    
+    def class_names(self) -> list[str]:
+        names = self._model.names
+        return [names[i] for i in sorted(names)]
 
     def detect(self, bgr: np.ndarray) -> list[Detection]:
         result = self._model.predict(bgr, imgsz=self.imgsz, conf=self.min_conf, iou=self.iou,
@@ -61,3 +67,5 @@ class YoloDetector:
         h, w = bgr.shape[:2]
         return to_detections(boxes.xyxy.cpu().numpy(), boxes.conf.cpu().numpy(),
                              boxes.cls.cpu().numpy(), result.names, w, h)
+
+    

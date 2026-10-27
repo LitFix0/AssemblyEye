@@ -1,0 +1,66 @@
+{
+  "version": "7.9.1",
+  "flags": {
+    "needs_review": true
+  },
+  "shapes": [
+    {
+      "label": "connector_3",
+      "points": [
+        [
+          185.54359436035156,
+          196.9340057373047
+        ],
+        [
+          482.162841796875,
+          491.3507080078125
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.74",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "connector_3",
+      "points": [
+        [
+          1252.2747802734375,
+          267.09320068359375
+        ],
+        [
+          1549.884033203125,
+          567.1492919921875
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.70",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "cable",
+      "points": [
+        [
+          447.19671630859375,
+          427.8000793457031
+        ],
+        [
+          1262.5301513671875,
+          550.0386962890625
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.40",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\images\\train_207.png",
+  "imageData": null,
+  "imageHeight": 850,
+  "imageWidth": 1700
+}

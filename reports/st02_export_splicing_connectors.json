@@ -23,5 +23,31 @@
     "polygon": 60
   },
   "unlabelled": [],
-  "composition_issues": {}
+  "composition_issues": {},
+  "unreviewed": [
+    "train_005.png",
+    "train_028.png",
+    "train_054.png",
+    "train_057.png",
+    "train_059.png",
+    "train_074.png",
+    "train_103.png",
+    "train_114.png",
+    "train_160.png",
+    "train_166.png",
+    "train_167.png",
+    "train_193.png",
+    "train_207.png",
+    "train_212.png",
+    "train_216.png",
+    "train_251.png",
+    "train_289.png",
+    "train_296.png",
+    "train_315.png",
+    "train_319.png",
+    "validation_022.png",
+    "validation_030.png",
+    "validation_043.png",
+    "validation_056.png"
+  ]
 }

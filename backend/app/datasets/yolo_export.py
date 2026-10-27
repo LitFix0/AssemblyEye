@@ -8,7 +8,7 @@ from pathlib import Path
 import yaml
 from PIL import Image
 
-from .labelme_io import AnnotationError, parse_labelme, to_yolo_line
+from .labelme_io import AnnotationError, is_unreviewed, parse_labelme, to_yolo_line
 from .prepare import read_manifest
 from .selection import LeakageError
 
@@ -69,12 +69,15 @@ def export_yolo(category_dir, classes, out_dir, seed=42, val_fraction=0.2,
         raise ValueError(f"no manifest found in {cat}")
     assert_manifest_clean(rows)
 
-    parsed, unlabelled, errors = {}, [], []
+    parsed, unlabelled, unreviewed, errors = {}, [], [], []
     for r in rows:
         name = r["file"]
         jpath = cat / "labels_json" / f"{Path(name).stem}.json"
         if not jpath.is_file():
             unlabelled.append(name)
+            continue
+        if is_unreviewed(jpath):
+            unreviewed.append(name)
             continue
         with Image.open(cat / "images" / name) as im:
             size = im.size
@@ -139,6 +142,7 @@ def export_yolo(category_dir, classes, out_dir, seed=42, val_fraction=0.2,
         "boxes_per_class": {c: per_class.get(c, 0) for c in classes},
         "source_shapes": dict(shape_counts),
         "unlabelled": sorted(unlabelled), "composition_issues": issues,
+        "unreviewed": sorted(unreviewed),
     }
     (out / "export_report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     return report

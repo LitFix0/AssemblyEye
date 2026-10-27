@@ -40,7 +40,7 @@ def main(argv=None) -> int:
         payload = {"image": img.name, "detector": detector.name,
                    "detections": [d.model_dump() for d in dets]}
         (out_dir / f"{stem}.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
-        save_image(out_dir / f"{stem}.png", draw_detections(img.bgr, dets, title=detector.name))
+        save_image(out_dir / f"{stem}.png", draw_detections(img.bgr, dets, title=detector.name, class_order=detector.class_names))
         by_class = defaultdict(list)
         for d in dets:
             by_class[d.class_name].append(d.confidence)

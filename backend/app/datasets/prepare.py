@@ -20,8 +20,8 @@ def read_manifest(path) -> list[dict]:
         return list(csv.DictReader(f))
 
 
-def prepare_batch(root, category, classes, n_train_pool, n_holdout, out_dir, seed=42) -> list[dict]:
-    chosen = select_for_annotation(index_category(root, category), n_train_pool, n_holdout, seed)
+def prepare_batch(root, category, classes, n_train_pool, n_holdout, out_dir, seed=42, reserve_dev=0) -> list[dict]:
+    chosen = select_for_annotation(index_category(root, category), n_train_pool, n_holdout, seed, reserve_dev)
     rows = [{"file": flat_name(s), "role": role, "source": s.rel_path} for s, role in chosen]
 
     cat_out = Path(out_dir) / category

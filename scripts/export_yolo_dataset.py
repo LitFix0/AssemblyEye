@@ -41,6 +41,9 @@ def main(argv=None) -> int:
     print("annotation shapes converted to boxes:", report["source_shapes"])
     if report["unlabelled"]:
         print(f"unlabelled (skipped): {len(report['unlabelled'])}")
+
+    if report["unreviewed"]:
+        print(f"UNREVIEWED drafts (skipped): {len(report['unreviewed'])}")
     if report["composition_issues"]:
         print(f"COMPOSITION ISSUES in {len(report['composition_issues'])} image(s):")
         for name, msgs in report["composition_issues"].items():

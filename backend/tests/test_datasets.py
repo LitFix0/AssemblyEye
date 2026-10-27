@@ -9,7 +9,8 @@ from PIL import Image
 from app.datasets.loco import (DatasetLayoutError, defect_values, index_category,
                                load_defect_names, summarize)
 from app.datasets.prepare import prepare_batch
-from app.datasets.selection import LeakageError, assert_no_leakage, select_for_annotation
+from app.datasets.selection import (LeakageError, assert_no_leakage, select_for_annotation,
+                                    select_normal_dev)
 
 CLASSES = ["a", "b"]
 
@@ -128,3 +129,12 @@ def test_prepare_extends_and_refuses_shrink(loco, tmp_path):
     assert prepare_batch(loco, "cat", CLASSES, 6, 2, out, seed=7) == second  # idempotent
     with pytest.raises(ValueError, match="existing manifest"):
         prepare_batch(loco, "cat", CLASSES, 2, 1, out, seed=7)
+
+def test_normal_dev_is_disjoint_from_annotation_and_reserve_is_enforced(loco):
+    s = index_category(loco, "cat")
+    dev = select_normal_dev(s, 3, seed=1)
+    ann = select_for_annotation(s, 7, 2, seed=1, reserve_dev=3)
+    assert len(dev) == 3 and all(x.is_normal and x.split == "train" for x in dev)
+    assert not {x.rel_path for x in dev} & {x.rel_path for x, _ in ann}
+    with pytest.raises(ValueError, match="only"):
+        select_for_annotation(s, 8, 0, seed=1, reserve_dev=3)  # 10 train - 3 reserved = 7

@@ -1,22 +1,32 @@
-import zlib
-
 import cv2
 import numpy as np
 
 from app.schemas.inspection import Detection
 
 FONT = cv2.FONT_HERSHEY_SIMPLEX
-PALETTE = [(255, 128, 0), (0, 200, 0), (0, 0, 255), (255, 0, 255), (0, 200, 200), (200, 200, 0)]
+# BGR. Colours are assigned by position in class_order, so two classes never share one
+# (the first version hashed class names, and two pairs of classes collided).
+PALETTE = [(255, 128, 0), (0, 200, 0), (0, 0, 255), (255, 0, 255),
+           (0, 200, 200), (200, 200, 0), (128, 0, 255), (0, 128, 255)]
+UNKNOWN_BGR = (150, 150, 150)
 
 
-def draw_detections(bgr: np.ndarray, detections: list[Detection], title: str = "") -> np.ndarray:
+def class_color(name: str, class_order: list[str]) -> tuple[int, int, int]:
+    if name in class_order:
+        return PALETTE[class_order.index(name) % len(PALETTE)]
+    return UNKNOWN_BGR
+
+
+def draw_detections(bgr: np.ndarray, detections: list[Detection], title: str = "",
+                    class_order: list[str] | None = None) -> np.ndarray:
     """Raw detector output: boxes with class and confidence. A banner goes ABOVE the image."""
     out = bgr.copy()
+    order = class_order if class_order is not None else sorted({d.class_name for d in detections})
     h, w = out.shape[:2]
     s = max(w, h) / 1000.0
     thick, fs = max(1, round(2 * s)), 0.5 * s
     for d in detections:
-        color = PALETTE[zlib.crc32(d.class_name.encode()) % len(PALETTE)]
+        color = class_color(d.class_name, order)
         p1, p2 = (int(d.bbox.x1), int(d.bbox.y1)), (int(d.bbox.x2), int(d.bbox.y2))
         cv2.rectangle(out, p1, p2, color, thick)
         label = f"{d.class_name} {d.confidence:.2f}"

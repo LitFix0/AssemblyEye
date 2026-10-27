@@ -20,14 +20,30 @@ def _shuffled(samples: list[Sample], split: str, seed: int) -> list[Sample]:
     return pool
 
 
-def select_for_annotation(samples, n_train_pool: int, n_holdout: int, seed: int = 42):
-    """Return [(Sample, role)]. Smaller selections are prefixes of larger ones (same seed)."""
+def select_for_annotation(samples, n_train_pool: int, n_holdout: int, seed: int = 42,
+                          reserve_dev: int = 0):
+    """Return [(Sample, role)]. Smaller selections are prefixes of larger ones (same seed).
+    The last `reserve_dev` train images of the shuffle are never selected (see select_normal_dev)."""
     train = _shuffled(samples, "train", seed)
     hold = _shuffled(samples, "validation", seed)
-    if n_train_pool > len(train) or n_holdout > len(hold):
-        raise ValueError(f"requested {n_train_pool}+{n_holdout} images but only "
-                         f"{len(train)} train and {len(hold)} validation normals exist")
+    available = len(train) - reserve_dev
+    if n_train_pool > available or n_holdout > len(hold):
+        raise ValueError(f"requested {n_train_pool}+{n_holdout} images but only {available} train "
+                         f"(after reserving {reserve_dev} for the dev set) and {len(hold)} "
+                         "validation normals exist")
     chosen = ([(s, "train_pool") for s in train[:n_train_pool]]
               + [(s, "holdout") for s in hold[:n_holdout]])
     assert_no_leakage(chosen)
+    return chosen
+
+
+def select_normal_dev(samples, n: int, seed: int = 42):
+    """Normal-only dev set: the LAST n images of the seeded train/good shuffle.
+    Annotation batches take the front of the same shuffle, so the two never overlap
+    when select_for_annotation is called with reserve_dev >= n."""
+    train = _shuffled(samples, "train", seed)
+    if n > len(train):
+        raise ValueError(f"requested {n} dev images but only {len(train)} train normals exist")
+    chosen = train[len(train) - n:]
+    assert_no_leakage([(s, "normal_dev") for s in chosen])
     return chosen

@@ -8,7 +8,7 @@ import pytest
 
 from app.schemas.inspection import BBox, Detection
 from app.services.detection.yolo_detector import YoloDetector, file_fingerprint, to_detections
-from app.services.visualization.detections import draw_detections
+from app.services.visualization.detections import class_color, draw_detections
 
 REPO = Path(__file__).resolve().parents[2]
 NAMES = {0: "nut", 1: "washer"}
@@ -57,3 +57,8 @@ def test_draw_detections_adds_banner_and_keeps_input():
     assert out.shape[1] == 200 and out.shape[0] > 100
     assert np.array_equal(img, before)
     assert draw_detections(img, [], title="").shape == img.shape
+
+def test_class_colors_are_distinct():
+    order = ["screw_long", "screw_short", "nut", "washer"]
+    assert len({class_color(c, order) for c in order}) == 4
+    assert class_color("mystery", order) not in {class_color(c, order) for c in order}

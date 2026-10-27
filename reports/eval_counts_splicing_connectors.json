@@ -1,0 +1,149 @@
+{
+  "category": "splicing_connectors",
+  "detector": "yolo:smoke_splicing_best.pt@197e11e04a99 imgsz=960 min_conf=0.1",
+  "n": 60,
+  "seed": 42,
+  "images": [
+    "train/good/358.png",
+    "train/good/064.png",
+    "train/good/062.png",
+    "train/good/107.png",
+    "train/good/304.png",
+    "train/good/221.png",
+    "train/good/168.png",
+    "train/good/121.png",
+    "train/good/051.png",
+    "train/good/341.png",
+    "train/good/337.png",
+    "train/good/345.png",
+    "train/good/033.png",
+    "train/good/259.png",
+    "train/good/019.png",
+    "train/good/252.png",
+    "train/good/075.png",
+    "train/good/206.png",
+    "train/good/302.png",
+    "train/good/069.png",
+    "train/good/087.png",
+    "train/good/093.png",
+    "train/good/140.png",
+    "train/good/123.png",
+    "train/good/076.png",
+    "train/good/306.png",
+    "train/good/268.png",
+    "train/good/014.png",
+    "train/good/186.png",
+    "train/good/130.png",
+    "train/good/129.png",
+    "train/good/352.png",
+    "train/good/285.png",
+    "train/good/108.png",
+    "train/good/192.png",
+    "train/good/242.png",
+    "train/good/115.png",
+    "train/good/150.png",
+    "train/good/283.png",
+    "train/good/336.png",
+    "train/good/000.png",
+    "train/good/112.png",
+    "train/good/238.png",
+    "train/good/010.png",
+    "train/good/215.png",
+    "train/good/322.png",
+    "train/good/332.png",
+    "train/good/220.png",
+    "train/good/311.png",
+    "train/good/063.png",
+    "train/good/269.png",
+    "train/good/181.png",
+    "train/good/006.png",
+    "train/good/071.png",
+    "train/good/228.png",
+    "train/good/200.png",
+    "train/good/128.png",
+    "train/good/030.png",
+    "train/good/281.png",
+    "train/good/348.png"
+  ],
+  "raw": [
+    {
+      "threshold": 0.2,
+      "exact": 42,
+      "images": 60,
+      "exact_rate": 0.7,
+      "images_with_cross_class_overlap": 2,
+      "cross_class_pairs": 2
+    },
+    {
+      "threshold": 0.3,
+      "exact": 54,
+      "images": 60,
+      "exact_rate": 0.9,
+      "images_with_cross_class_overlap": 2,
+      "cross_class_pairs": 2
+    },
+    {
+      "threshold": 0.4,
+      "exact": 37,
+      "images": 60,
+      "exact_rate": 0.6166666666666667,
+      "images_with_cross_class_overlap": 1,
+      "cross_class_pairs": 1
+    }
+  ],
+  "suppressed": [
+    {
+      "threshold": 0.2,
+      "exact": 43,
+      "images": 60,
+      "exact_rate": 0.7166666666666667,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
+    },
+    {
+      "threshold": 0.3,
+      "exact": 56,
+      "images": 60,
+      "exact_rate": 0.9333333333333333,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
+    },
+    {
+      "threshold": 0.4,
+      "exact": 38,
+      "images": 60,
+      "exact_rate": 0.6333333333333333,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
+    }
+  ],
+  "failures_at": 0.3,
+  "failures": {
+    "337.png": {
+      "cable": 2,
+      "connector_3": 2
+    },
+    "306.png": {
+      "cable": 2,
+      "connector_3": 2
+    },
+    "192.png": {
+      "cable": 1,
+      "connector_2": 1,
+      "connector_3": 2
+    },
+    "220.png": {
+      "cable": 2,
+      "connector_2": 2
+    },
+    "228.png": {
+      "cable": 1,
+      "connector_2": 1,
+      "connector_3": 2
+    },
+    "128.png": {
+      "cable": 2,
+      "connector_2": 2
+    }
+  }
+}

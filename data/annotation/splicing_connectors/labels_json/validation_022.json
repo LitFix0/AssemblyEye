@@ -1,0 +1,66 @@
+{
+  "version": "7.9.1",
+  "flags": {
+    "needs_review": true
+  },
+  "shapes": [
+    {
+      "label": "connector_2",
+      "points": [
+        [
+          1213.3519287109375,
+          322.99334716796875
+        ],
+        [
+          1509.89306640625,
+          549.599609375
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.93",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "connector_2",
+      "points": [
+        [
+          117.4744873046875,
+          230.2226104736328
+        ],
+        [
+          407.6141357421875,
+          442.3162841796875
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.85",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "cable",
+      "points": [
+        [
+          399.3836669921875,
+          274.4697265625
+        ],
+        [
+          1237.6312255859375,
+          389.16424560546875
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.43",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\images\\validation_022.png",
+  "imageData": null,
+  "imageHeight": 850,
+  "imageWidth": 1700
+}

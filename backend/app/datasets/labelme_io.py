@@ -84,3 +84,12 @@ def to_yolo_line(box: Box, class_index: int, width: int, height: int) -> str:
     bw = (box.x2 - box.x1) / width
     bh = (box.y2 - box.y1) / height
     return f"{class_index} {cx:.6f} {cy:.6f} {bw:.6f} {bh:.6f}"
+
+def is_unreviewed(path) -> bool:
+    """True for model-drafted files whose 'needs_review' flag is still ticked."""
+    try:
+        data = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False  # unreadable files are reported by parse_labelme
+    flags = data.get("flags")
+    return isinstance(flags, dict) and flags.get("needs_review") is True

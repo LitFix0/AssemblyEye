@@ -1,0 +1,478 @@
+{
+  "category": "screw_bag",
+  "detector": "yolo:smoke_screw_bag_best.pt@4a71791b786a imgsz=640 min_conf=0.1",
+  "n": 60,
+  "seed": 42,
+  "images": [
+    "train/good/358.png",
+    "train/good/064.png",
+    "train/good/062.png",
+    "train/good/107.png",
+    "train/good/304.png",
+    "train/good/221.png",
+    "train/good/168.png",
+    "train/good/121.png",
+    "train/good/051.png",
+    "train/good/341.png",
+    "train/good/337.png",
+    "train/good/345.png",
+    "train/good/033.png",
+    "train/good/259.png",
+    "train/good/019.png",
+    "train/good/252.png",
+    "train/good/075.png",
+    "train/good/206.png",
+    "train/good/302.png",
+    "train/good/069.png",
+    "train/good/087.png",
+    "train/good/093.png",
+    "train/good/140.png",
+    "train/good/123.png",
+    "train/good/076.png",
+    "train/good/306.png",
+    "train/good/268.png",
+    "train/good/014.png",
+    "train/good/186.png",
+    "train/good/130.png",
+    "train/good/129.png",
+    "train/good/352.png",
+    "train/good/285.png",
+    "train/good/108.png",
+    "train/good/192.png",
+    "train/good/242.png",
+    "train/good/115.png",
+    "train/good/150.png",
+    "train/good/283.png",
+    "train/good/336.png",
+    "train/good/000.png",
+    "train/good/112.png",
+    "train/good/238.png",
+    "train/good/010.png",
+    "train/good/215.png",
+    "train/good/322.png",
+    "train/good/332.png",
+    "train/good/220.png",
+    "train/good/311.png",
+    "train/good/063.png",
+    "train/good/269.png",
+    "train/good/181.png",
+    "train/good/006.png",
+    "train/good/071.png",
+    "train/good/228.png",
+    "train/good/200.png",
+    "train/good/128.png",
+    "train/good/030.png",
+    "train/good/281.png",
+    "train/good/348.png"
+  ],
+  "raw": [
+    {
+      "threshold": 0.3,
+      "exact": 2,
+      "images": 60,
+      "exact_rate": 0.03333333333333333,
+      "images_with_cross_class_overlap": 59,
+      "cross_class_pairs": 181
+    },
+    {
+      "threshold": 0.4,
+      "exact": 2,
+      "images": 60,
+      "exact_rate": 0.03333333333333333,
+      "images_with_cross_class_overlap": 54,
+      "cross_class_pairs": 101
+    },
+    {
+      "threshold": 0.5,
+      "exact": 2,
+      "images": 60,
+      "exact_rate": 0.03333333333333333,
+      "images_with_cross_class_overlap": 36,
+      "cross_class_pairs": 43
+    },
+    {
+      "threshold": 0.6,
+      "exact": 0,
+      "images": 60,
+      "exact_rate": 0.0,
+      "images_with_cross_class_overlap": 12,
+      "cross_class_pairs": 12
+    },
+    {
+      "threshold": 0.7,
+      "exact": 0,
+      "images": 60,
+      "exact_rate": 0.0,
+      "images_with_cross_class_overlap": 4,
+      "cross_class_pairs": 4
+    }
+  ],
+  "suppressed": [
+    {
+      "threshold": 0.3,
+      "exact": 12,
+      "images": 60,
+      "exact_rate": 0.2,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
+    },
+    {
+      "threshold": 0.4,
+      "exact": 12,
+      "images": 60,
+      "exact_rate": 0.2,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
+    },
+    {
+      "threshold": 0.5,
+      "exact": 7,
+      "images": 60,
+      "exact_rate": 0.11666666666666667,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
+    },
+    {
+      "threshold": 0.6,
+      "exact": 0,
+      "images": 60,
+      "exact_rate": 0.0,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
+    },
+    {
+      "threshold": 0.7,
+      "exact": 0,
+      "images": 60,
+      "exact_rate": 0.0,
+      "images_with_cross_class_overlap": 0,
+      "cross_class_pairs": 0
+    }
+  ],
+  "failures_at": 0.5,
+  "failures": {
+    "358.png": {
+      "nut": 3,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "064.png": {
+      "nut": 3,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "062.png": {
+      "nut": 3,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "107.png": {
+      "nut": 3,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "304.png": {
+      "nut": 1,
+      "screw_short": 1
+    },
+    "221.png": {
+      "nut": 2,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "168.png": {
+      "nut": 1,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "121.png": {
+      "nut": 2,
+      "screw_long": 1,
+      "washer": 1
+    },
+    "051.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 2
+    },
+    "341.png": {
+      "nut": 2,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "337.png": {
+      "nut": 3,
+      "screw_short": 1,
+      "washer": 2
+    },
+    "345.png": {
+      "nut": 3,
+      "screw_long": 2,
+      "screw_short": 2,
+      "washer": 1
+    },
+    "033.png": {
+      "nut": 3,
+      "screw_long": 1,
+      "washer": 2
+    },
+    "019.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "252.png": {
+      "nut": 3,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "075.png": {
+      "nut": 4,
+      "screw_long": 1,
+      "screw_short": 1
+    },
+    "206.png": {
+      "nut": 3,
+      "screw_long": 2
+    },
+    "302.png": {
+      "nut": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "069.png": {
+      "nut": 2,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "087.png": {
+      "nut": 2,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "093.png": {
+      "nut": 3,
+      "screw_short": 1
+    },
+    "140.png": {
+      "nut": 3,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 2
+    },
+    "123.png": {
+      "nut": 3,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 2
+    },
+    "076.png": {
+      "nut": 3,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 2
+    },
+    "306.png": {
+      "nut": 3,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "268.png": {
+      "nut": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "014.png": {
+      "nut": 3,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "186.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "130.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 2
+    },
+    "129.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 4,
+      "washer": 1
+    },
+    "352.png": {
+      "nut": 2,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "285.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1
+    },
+    "108.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "192.png": {
+      "nut": 3,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "242.png": {
+      "nut": 3,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 2
+    },
+    "115.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 2
+    },
+    "150.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "283.png": {
+      "nut": 3,
+      "screw_long": 3,
+      "screw_short": 1
+    },
+    "336.png": {
+      "nut": 1,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "112.png": {
+      "nut": 3,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 2
+    },
+    "238.png": {
+      "nut": 2,
+      "screw_long": 4,
+      "screw_short": 2,
+      "washer": 2
+    },
+    "010.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "215.png": {
+      "nut": 4,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "322.png": {
+      "nut": 3,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "332.png": {
+      "screw_long": 3,
+      "screw_short": 1
+    },
+    "220.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "311.png": {
+      "nut": 3,
+      "screw_long": 2,
+      "washer": 1
+    },
+    "063.png": {
+      "nut": 3,
+      "screw_long": 2
+    },
+    "269.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "181.png": {
+      "nut": 3,
+      "screw_long": 1,
+      "screw_short": 1
+    },
+    "006.png": {
+      "nut": 2,
+      "screw_long": 1,
+      "screw_short": 1
+    },
+    "071.png": {
+      "nut": 3,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "228.png": {
+      "nut": 2,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "200.png": {
+      "nut": 4,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "128.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 2
+    },
+    "030.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "281.png": {
+      "nut": 2,
+      "screw_long": 1,
+      "screw_short": 1,
+      "washer": 1
+    },
+    "348.png": {
+      "nut": 2,
+      "screw_long": 2,
+      "screw_short": 1
+    }
+  }
+}

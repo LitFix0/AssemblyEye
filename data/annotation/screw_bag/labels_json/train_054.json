@@ -1,0 +1,148 @@
+{
+  "version": "7.9.1",
+  "flags": {
+    "needs_review": false
+  },
+  "shapes": [
+    {
+      "label": "nut",
+      "points": [
+        [
+          824.5240478515625,
+          519.1019287109375
+        ],
+        [
+          944.9512939453125,
+          639.8333129882812
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.84",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "nut",
+      "points": [
+        [
+          247.9344482421875,
+          410.6611633300781
+        ],
+        [
+          368.2311706542969,
+          527.8854370117188
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.69",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "washer",
+      "points": [
+        [
+          320.48712158203125,
+          720.2776489257812
+        ],
+        [
+          434.653564453125,
+          829.5711669921875
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.61",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "washer",
+      "points": [
+        [
+          297.20538330078125,
+          528.8317260742188
+        ],
+        [
+          411.1961364746094,
+          641.12451171875
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.55",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "screw_short",
+      "points": [
+        [
+          488.06756591796875,
+          503.84344482421875
+        ],
+        [
+          785.7132568359375,
+          680.7941284179688
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.52",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "screw_long",
+      "points": [
+        [
+          723.2597623089983,
+          709.5925297113753
+        ],
+        [
+          385.39898132427845,
+          650.169779286927
+        ],
+        [
+          371.8166383701189,
+          646.7741935483871
+        ],
+        [
+          366.723259762309,
+          718.081494057725
+        ],
+        [
+          707.9796264855688,
+          780.899830220713
+        ],
+        [
+          706.2818336162989,
+          821.6468590831919
+        ],
+        [
+          791.1714770797963,
+          819.9490662139219
+        ],
+        [
+          808.1494057724958,
+          694.3123938879457
+        ],
+        [
+          721.5619694397284,
+          675.6366723259763
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\images\\train_054.png",
+  "imageData": null,
+  "imageHeight": 1100,
+  "imageWidth": 1600
+}

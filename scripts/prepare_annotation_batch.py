@@ -18,6 +18,7 @@ def main(argv=None) -> int:
     ap.add_argument("--root", default="data/raw/mvtec_loco")
     ap.add_argument("--out", default="data/annotation")
     ap.add_argument("--classes", default="configs/datasets/loco_classes.yaml")
+    ap.add_argument("--reserve-dev", type=int, default=60)
     args = ap.parse_args(argv)
     try:
         cfg = yaml.safe_load(Path(args.classes).read_text(encoding="utf-8"))

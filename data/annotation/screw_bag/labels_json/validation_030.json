@@ -1,0 +1,144 @@
+{
+  "version": "7.9.1",
+  "flags": {
+    "needs_review": false
+  },
+  "shapes": [
+    {
+      "label": "nut",
+      "points": [
+        [
+          576.1956787109375,
+          630.8557739257812
+        ],
+        [
+          698.8027954101562,
+          751.9365844726562
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.82",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "screw_short",
+      "points": [
+        [
+          160.3663044072979,
+          746.0652686541675
+        ],
+        [
+          457.4219684697979,
+          899.1417457049488
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.79",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "nut",
+      "points": [
+        [
+          849.778076171875,
+          612.3138427734375
+        ],
+        [
+          972.5684204101562,
+          729.5614624023438
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.78",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "washer",
+      "points": [
+        [
+          674.7058715820312,
+          570.0150146484375
+        ],
+        [
+          797.7404174804688,
+          684.5823974609375
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.70",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "washer",
+      "points": [
+        [
+          693.2745361328125,
+          448.79693603515625
+        ],
+        [
+          805.73193359375,
+          559.8821411132812
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.60",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "screw_long",
+      "points": [
+        [
+          480.4753820033956,
+          886.1629881154499
+        ],
+        [
+          448.2173174872666,
+          762.2241086587437
+        ],
+        [
+          522.9202037351444,
+          740.1528013582343
+        ],
+        [
+          531.409168081494,
+          784.295415959253
+        ],
+        [
+          869.2699490662139,
+          697.7079796264856
+        ],
+        [
+          893.0390492359933,
+          752.037351443124
+        ],
+        [
+          548.3870967741935,
+          843.7181663837013
+        ],
+        [
+          555.1782682512734,
+          870.8828522920204
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\images\\validation_030.png",
+  "imageData": null,
+  "imageHeight": 1100,
+  "imageWidth": 1600
+}

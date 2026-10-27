@@ -1,0 +1,120 @@
+{
+  "version": "7.9.1",
+  "flags": {
+    "needs_review": false
+  },
+  "shapes": [
+    {
+      "label": "nut",
+      "points": [
+        [
+          623.03662109375,
+          457.6951599121094
+        ],
+        [
+          743.5203857421875,
+          580.581787109375
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.76",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "screw_short",
+      "points": [
+        [
+          662.9202270507812,
+          729.4713134765625
+        ],
+        [
+          960.6509399414062,
+          853.0860595703125
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.68",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "nut",
+      "points": [
+        [
+          370.05615234375,
+          682.2832641601562
+        ],
+        [
+          481.4073181152344,
+          800.6871948242188
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.67",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "screw_long",
+      "points": [
+        [
+          582.3429541595925,
+          563.5823429541596
+        ],
+        [
+          1032.258064516129,
+          690.9168081494058
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.63",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "washer",
+      "points": [
+        [
+          536.5581665039062,
+          692.269775390625
+        ],
+        [
+          649.0640869140625,
+          809.3232421875
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.43",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "washer",
+      "points": [
+        [
+          249.57555178268254,
+          634.8896434634975
+        ],
+        [
+          375.21222410865875,
+          758.8285229202038
+        ]
+      ],
+      "group_id": null,
+      "description": "draft conf=0.12",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\images\\train_057.png",
+  "imageData": null,
+  "imageHeight": 1100,
+  "imageWidth": 1600
+}

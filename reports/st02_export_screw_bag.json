@@ -9,20 +9,22 @@
     "washer"
   ],
   "images": {
-    "train": 13,
-    "val": 3,
-    "holdout": 4
+    "train": 29,
+    "val": 7,
+    "holdout": 8
   },
   "boxes_per_class": {
-    "screw_long": 20,
-    "screw_short": 20,
-    "nut": 40,
-    "washer": 40
+    "screw_long": 44,
+    "screw_short": 44,
+    "nut": 88,
+    "washer": 88
   },
   "source_shapes": {
-    "polygon": 80,
-    "circle": 40
+    "rectangle": 104,
+    "polygon": 117,
+    "circle": 43
   },
   "unlabelled": [],
-  "composition_issues": {}
+  "composition_issues": {},
+  "unreviewed": []
 }
