@@ -1,0 +1,27 @@
+{
+  "category": "splicing_connectors",
+  "seed": 42,
+  "val_fraction": 0.2,
+  "classes": [
+    "connector_2",
+    "connector_3",
+    "connector_5",
+    "cable"
+  ],
+  "images": {
+    "train": 13,
+    "val": 3,
+    "holdout": 4
+  },
+  "boxes_per_class": {
+    "connector_2": 14,
+    "connector_3": 10,
+    "connector_5": 16,
+    "cable": 20
+  },
+  "source_shapes": {
+    "polygon": 60
+  },
+  "unlabelled": [],
+  "composition_issues": {}
+}

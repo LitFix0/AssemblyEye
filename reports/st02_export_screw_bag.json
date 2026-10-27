@@ -1,0 +1,28 @@
+{
+  "category": "screw_bag",
+  "seed": 42,
+  "val_fraction": 0.2,
+  "classes": [
+    "screw_long",
+    "screw_short",
+    "nut",
+    "washer"
+  ],
+  "images": {
+    "train": 13,
+    "val": 3,
+    "holdout": 4
+  },
+  "boxes_per_class": {
+    "screw_long": 20,
+    "screw_short": 20,
+    "nut": 40,
+    "washer": 40
+  },
+  "source_shapes": {
+    "polygon": 80,
+    "circle": 40
+  },
+  "unlabelled": [],
+  "composition_issues": {}
+}
