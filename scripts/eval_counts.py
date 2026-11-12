@@ -12,6 +12,7 @@ from app.datasets.prepare import read_manifest  # noqa: E402
 from app.datasets.selection import select_normal_dev  # noqa: E402
 from app.evaluation.counts import (counts_at, exact_screw_bag, exact_splicing,  # noqa: E402
                                    suppress_cross_class, summarize)
+from app.evaluation.screw_length import relabel_by_length  # noqa: E402
 from app.schemas.spec import load_spec  # noqa: E402
 from app.services.detection.yolo_detector import YoloDetector  # noqa: E402
 
@@ -24,6 +25,8 @@ def main(argv=None) -> int:
     ap.add_argument("--n", type=int, default=60)
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--thresholds", type=float, nargs="+", default=[0.3, 0.4, 0.5, 0.6, 0.7])
+    ap.add_argument("--screw-threshold", type=float, default=None,
+                    help="diagonal px; required for a detector with a merged 'screw' class")
     ap.add_argument("--root", default="data/raw/mvtec_loco")
     ap.add_argument("--annotation-dir", default="data/annotation")
     ap.add_argument("--spec", default="configs/products/screw_bag.yaml")
@@ -45,7 +48,14 @@ def main(argv=None) -> int:
             check = exact_splicing
         detector = YoloDetector(args.weights, args.imgsz,
                                 min_conf=min(0.10, min(args.thresholds)), device=args.device)
+        merged = "screw" in detector.class_names
+        if merged and args.screw_threshold is None:
+            raise ValueError("this detector has a merged 'screw' class: pass --screw-threshold")
+        if args.screw_threshold is not None and not (merged and args.category == "screw_bag"):
+            raise ValueError("--screw-threshold only applies to a screw_bag detector with a 'screw' class")
         per_image = [detector.detect(load_image(s.image_path).bgr) for s in dev]
+        if args.screw_threshold is not None:
+            per_image = [relabel_by_length(d, args.screw_threshold) for d in per_image]
     except (DatasetLayoutError, ValueError, OSError, ImportError, KeyError, yaml.YAMLError) as e:
         print(f"ERROR: {e}", file=sys.stderr)
         return 2
@@ -53,7 +63,10 @@ def main(argv=None) -> int:
     raw = summarize(per_image, check, args.thresholds)
     sup = summarize([suppress_cross_class(d) for d in per_image], check, args.thresholds)
     print(f"\n{args.category}: {len(dev)} normal dev images (train/good, never annotated, never trained on)")
-    print(f"detector: {detector.name}\n")
+    print(f"detector: {detector.name}")
+    if args.screw_threshold is not None:
+        print(f"screw rule: box diagonal >= {args.screw_threshold:g} px -> screw_long, else screw_short")
+    print()
     print(f"{'thr':>5}  {'exact (raw)':>14}  {'exact (suppressed)':>20}  {'imgs w/ overlap':>16}")
     for a, b in zip(raw, sup):
         ra = f"{a['exact']}/{a['images']} ({a['exact_rate']:.0%})"
@@ -67,12 +80,12 @@ def main(argv=None) -> int:
     for name, c in list(failures.items())[:args.worst]:
         print(f"  {name}: {c}")
 
-        out = Path("reports") / f"eval_counts_{args.category}_{Path(args.weights).stem}.json"
+    out = Path("reports") / f"eval_counts_{args.category}_{Path(args.weights).stem}.json"
     out.parent.mkdir(exist_ok=True)
     out.write_text(json.dumps({"category": args.category, "detector": detector.name, "n": len(dev),
-                               "seed": args.seed, "images": [s.rel_path for s in dev],
-                               "raw": raw, "suppressed": sup, "failures_at": ref,
-                               "failures": failures}, indent=2), encoding="utf-8")
+                               "seed": args.seed, "screw_threshold": args.screw_threshold,
+                               "images": [s.rel_path for s in dev], "raw": raw, "suppressed": sup,
+                               "failures_at": ref, "failures": failures}, indent=2), encoding="utf-8")
     print("wrote", out)
     return 0
 

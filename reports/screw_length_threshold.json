@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-11-06T08:20:58+00:00",
+  "dataset": "data\\processed\\yolo_screw_bag",
+  "splits": [
+    "train",
+    "val"
+  ],
+  "n_long": 36,
+  "n_short": 36,
+  "smallest_long": 438.9,
+  "largest_short": 420.8,
+  "threshold": 429.8,
+  "separable": true,
+  "margin_px": 18.1,
+  "wrong": 0,
+  "total": 72
+}
