@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-11-14T14:04:48+00:00",
+  "dataset": "data\\processed\\yolo_splicing_connectors",
+  "weights": "models\\splicing_v2_best.pt",
+  "weights_fingerprint": "76c47f1e0822",
+  "imgsz": 960,
+  "holdout_images": 8,
+  "rerun": false,
+  "overall": {
+    "boxes": 24,
+    "precision": 0.8850774207016837,
+    "recall": 1.0,
+    "map50": 0.9857407407407407,
+    "map50_95": 0.7372257275132275
+  },
+  "per_class": {
+    "connector_2": {
+      "boxes": 8,
+      "precision": 0.9343890158566608,
+      "recall": 1.0,
+      "map50": 0.995,
+      "map50_95": 0.7663125
+    },
+    "connector_5": {
+      "boxes": 8,
+      "precision": 0.9245926635894552,
+      "recall": 1.0,
+      "map50": 0.995,
+      "map50_95": 0.7705869047619048
+    },
+    "cable": {
+      "boxes": 8,
+      "precision": 0.7962505826589351,
+      "recall": 1.0,
+      "map50": 0.9672222222222222,
+      "map50_95": 0.6747777777777777
+    }
+  }
+}

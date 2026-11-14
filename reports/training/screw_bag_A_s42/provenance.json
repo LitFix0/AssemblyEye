@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-11-12T06:16:02+00:00",
+  "git_commit": "a1b36064cebf1a2900ba7925077e91e70ee08004",
+  "git_dirty": false,
+  "args": {
+    "dataset": "/content/ab/yolo_screw_bag",
+    "name": "screw_bag_A_s42",
+    "project": "/content/drive/MyDrive/assemblyeye/runs",
+    "model": "yolo11n.pt",
+    "epochs": 100,
+    "imgsz": 640,
+    "batch": 4,
+    "device": "auto",
+    "workers": 2,
+    "seed": 42
+  },
+  "device": "0",
+  "gpu": "Tesla T4",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "versions": {
+    "python": "3.13.16",
+    "ultralytics": "8.4.211",
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "opencv": "4.14.0"
+  },
+  "pretrained_weights": {
+    "name": "yolo11n.pt",
+    "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+  },
+  "dataset_export_report": {
+    "category": "screw_bag",
+    "seed": 42,
+    "val_fraction": 0.2,
+    "classes": [
+      "screw_long",
+      "screw_short",
+      "nut",
+      "washer"
+    ],
+    "images": {
+      "train": 29,
+      "val": 7,
+      "holdout": 8
+    },
+    "boxes_per_class": {
+      "screw_long": 44,
+      "screw_short": 44,
+      "nut": 88,
+      "washer": 88
+    },
+    "source_shapes": {
+      "rectangle": 103,
+      "polygon": 118,
+      "circle": 43
+    },
+    "unlabelled": [],
+    "composition_issues": {},
+    "unreviewed": []
+  }
+}

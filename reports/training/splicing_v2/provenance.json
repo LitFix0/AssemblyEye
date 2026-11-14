@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-10-27T21:27:26+00:00",
+  "git_commit": "c08f4d07e51b3176b84423d1c1b520b690313828",
+  "git_dirty": false,
+  "args": {
+    "dataset": "/content/v2/yolo_splicing_connectors",
+    "name": "splicing_v2",
+    "project": "/content/drive/MyDrive/assemblyeye/runs",
+    "model": "yolo11n.pt",
+    "epochs": 100,
+    "imgsz": 960,
+    "batch": 4,
+    "device": "auto",
+    "workers": 2,
+    "seed": 42
+  },
+  "device": "0",
+  "gpu": "Tesla T4",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "versions": {
+    "python": "3.13.16",
+    "ultralytics": "8.4.191",
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0",
+    "opencv": "5.0.0"
+  },
+  "pretrained_weights": {
+    "name": "yolo11n.pt",
+    "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+  },
+  "dataset_export_report": {
+    "category": "splicing_connectors",
+    "seed": 42,
+    "val_fraction": 0.2,
+    "classes": [
+      "connector_2",
+      "connector_3",
+      "connector_5",
+      "cable"
+    ],
+    "images": {
+      "train": 29,
+      "val": 7,
+      "holdout": 8
+    },
+    "boxes_per_class": {
+      "connector_2": 36,
+      "connector_3": 24,
+      "connector_5": 28,
+      "cable": 44
+    },
+    "source_shapes": {
+      "polygon": 86,
+      "rectangle": 46
+    },
+    "unlabelled": [],
+    "composition_issues": {},
+    "unreviewed": []
+  }
+}

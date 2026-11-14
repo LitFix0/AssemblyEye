@@ -35,6 +35,8 @@ def main(argv=None) -> int:
     ap.add_argument("--split-file", default=None)
     ap.add_argument("--root", default="data/raw/mvtec_loco")
     ap.add_argument("--device", default=None)
+    ap.add_argument("--no-suppress", action="store_true",
+                    help="skip cross-class suppression before the count rules")
     args = ap.parse_args(argv)
     try:
         spec = load_spec(args.spec)
@@ -55,10 +57,12 @@ def main(argv=None) -> int:
         rows = []
         for rel in dev:
             img = load_image(samples[rel].image_path)
-            dets = suppress_cross_class(detector.detect(img.bgr))
+            dets = detector.detect(img.bgr)
+            if not args.no_suppress:
+                dets = suppress_cross_class(dets)
             status, findings = verify_counts(dets, spec)
             rows.append({"image": rel, "group": split["groups"][rel], "stratum": split["strata"][rel],
-                         "verdict": status.value, "findings": [f.code for f in findings]})
+                         "verdict": status.value, "findings": [f"{f.code}:{f.class_name}" for f in findings]})
     except (DatasetLayoutError, ValueError, OSError, ImportError, KeyError, yaml.YAMLError) as e:
         print(f"ERROR: {e}", file=sys.stderr)
         return 2
@@ -78,7 +82,8 @@ def main(argv=None) -> int:
                 if tally["group"] == group:
                     print(fmt(f"   {key}", tally))
     out = Path("reports") / (f"eval_defects_{args.category}_{Path(args.weights).stem}"
-                             f"_a{t.accept_conf:g}_r{t.review_conf:g}.json")
+                             f"_a{t.accept_conf:g}_r{t.review_conf:g}"
+                             f"{'_nosup' if args.no_suppress else ''}.json")
     out.parent.mkdir(exist_ok=True)
     out.write_text(json.dumps({"category": args.category, "detector": detector.name, "split": args.split,
                                "accept": t.accept_conf, "review": t.review_conf, "groups": grp,

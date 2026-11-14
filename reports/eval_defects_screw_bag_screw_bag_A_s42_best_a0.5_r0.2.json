@@ -1,0 +1,1063 @@
+{
+ "category": "screw_bag",
+ "detector": "yolo:screw_bag_A_s42_best.pt@5ac8ab93847f imgsz=640 min_conf=0.1",
+ "split": "dev",
+ "accept": 0.5,
+ "review": 0.2,
+ "groups": {
+  "normal": {
+   "PASS": 34,
+   "REVIEW": 1,
+   "FAIL": 2,
+   "n": 37
+  },
+  "logical": {
+   "PASS": 1,
+   "REVIEW": 0,
+   "FAIL": 42,
+   "n": 43
+  },
+  "structural": {
+   "PASS": 17,
+   "REVIEW": 4,
+   "FAIL": 5,
+   "n": 26
+  }
+ },
+ "strata": {
+  "good": {
+   "PASS": 34,
+   "REVIEW": 1,
+   "FAIL": 2,
+   "n": 37,
+   "group": "normal"
+  },
+  "screw_too_long": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 6,
+   "n": 6,
+   "group": "logical"
+  },
+  "screw_too_short": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 6,
+   "n": 6,
+   "group": "logical"
+  },
+  "1_additional_long_screw": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "1_additional_washer": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "1_additional_nut": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "1_additional_short_screw": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "1_missing_washer": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "1_missing_nut": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "1_missing_long_screw": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "1_missing_short_screw": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "1_very_short_screw": {
+   "PASS": 1,
+   "REVIEW": 0,
+   "FAIL": 4,
+   "n": 5,
+   "group": "logical"
+  },
+  "2_very_short_screws": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "1_additional_washer+1_missing_nut": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "1_additional_nut+1_missing_washer": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "2_additional_nuts+2_missing_washers": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "2_additional_washers+2_missing_nuts": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 2,
+   "group": "logical"
+  },
+  "bag_broken": {
+   "PASS": 3,
+   "REVIEW": 1,
+   "FAIL": 1,
+   "n": 5,
+   "group": "structural"
+  },
+  "part_broken": {
+   "PASS": 6,
+   "REVIEW": 2,
+   "FAIL": 0,
+   "n": 8,
+   "group": "structural"
+  },
+  "color": {
+   "PASS": 4,
+   "REVIEW": 0,
+   "FAIL": 1,
+   "n": 5,
+   "group": "structural"
+  },
+  "contamination": {
+   "PASS": 4,
+   "REVIEW": 1,
+   "FAIL": 3,
+   "n": 8,
+   "group": "structural"
+  }
+ },
+ "rows": [
+  {
+   "image": "test/good/003.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/009.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/013.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/014.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/019.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/030.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/035.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/036.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/037.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/039.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/040.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/045.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_long",
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/good/047.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/048.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/056.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/064.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/066.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/070.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/071.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/077.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/081.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/082.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/083.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/091.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/092.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_long",
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/good/094.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/095.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/096.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/097.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/099.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/103.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/106.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/108.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/112.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/113.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "REVIEW",
+   "findings": [
+    "UNCERTAIN_PART:screw_long"
+   ]
+  },
+  {
+   "image": "test/good/115.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/good/117.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/logical_anomalies/000.png",
+   "group": "logical",
+   "stratum": "screw_too_long",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_long",
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/002.png",
+   "group": "logical",
+   "stratum": "screw_too_long",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_long",
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/003.png",
+   "group": "logical",
+   "stratum": "screw_too_long",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_long",
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/004.png",
+   "group": "logical",
+   "stratum": "screw_too_long",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_long",
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/013.png",
+   "group": "logical",
+   "stratum": "screw_too_long",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_long",
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/020.png",
+   "group": "logical",
+   "stratum": "screw_too_long",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_long",
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/024.png",
+   "group": "logical",
+   "stratum": "screw_too_short",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/029.png",
+   "group": "logical",
+   "stratum": "screw_too_short",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/031.png",
+   "group": "logical",
+   "stratum": "screw_too_short",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/032.png",
+   "group": "logical",
+   "stratum": "screw_too_short",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/034.png",
+   "group": "logical",
+   "stratum": "screw_too_short",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/036.png",
+   "group": "logical",
+   "stratum": "screw_too_short",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/042.png",
+   "group": "logical",
+   "stratum": "1_additional_long_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_long"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/043.png",
+   "group": "logical",
+   "stratum": "1_additional_washer",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/046.png",
+   "group": "logical",
+   "stratum": "1_additional_long_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_long"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/047.png",
+   "group": "logical",
+   "stratum": "1_additional_nut",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:nut"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/048.png",
+   "group": "logical",
+   "stratum": "1_additional_washer",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/056.png",
+   "group": "logical",
+   "stratum": "1_additional_short_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/057.png",
+   "group": "logical",
+   "stratum": "1_additional_nut",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:nut"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/064.png",
+   "group": "logical",
+   "stratum": "1_additional_short_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/066.png",
+   "group": "logical",
+   "stratum": "1_missing_washer",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/069.png",
+   "group": "logical",
+   "stratum": "1_missing_nut",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:nut"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/074.png",
+   "group": "logical",
+   "stratum": "1_missing_long_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/075.png",
+   "group": "logical",
+   "stratum": "1_missing_short_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/079.png",
+   "group": "logical",
+   "stratum": "1_missing_short_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/080.png",
+   "group": "logical",
+   "stratum": "1_missing_nut",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:nut"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/081.png",
+   "group": "logical",
+   "stratum": "1_missing_long_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/083.png",
+   "group": "logical",
+   "stratum": "1_missing_washer",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/089.png",
+   "group": "logical",
+   "stratum": "1_very_short_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/090.png",
+   "group": "logical",
+   "stratum": "2_very_short_screws",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/096.png",
+   "group": "logical",
+   "stratum": "1_very_short_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/100.png",
+   "group": "logical",
+   "stratum": "1_very_short_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/101.png",
+   "group": "logical",
+   "stratum": "1_very_short_screw",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/logical_anomalies/105.png",
+   "group": "logical",
+   "stratum": "1_very_short_screw",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/106.png",
+   "group": "logical",
+   "stratum": "2_very_short_screws",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:screw_long",
+    "UNCERTAIN_EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/117.png",
+   "group": "logical",
+   "stratum": "1_additional_washer+1_missing_nut",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:nut",
+    "EXTRA:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/119.png",
+   "group": "logical",
+   "stratum": "1_additional_nut+1_missing_washer",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:nut",
+    "MISSING:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/121.png",
+   "group": "logical",
+   "stratum": "2_additional_nuts+2_missing_washers",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:nut",
+    "MISSING:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/126.png",
+   "group": "logical",
+   "stratum": "2_additional_washers+2_missing_nuts",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:nut",
+    "EXTRA:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/127.png",
+   "group": "logical",
+   "stratum": "2_additional_nuts+2_missing_washers",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:nut",
+    "MISSING:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/128.png",
+   "group": "logical",
+   "stratum": "2_additional_washers+2_missing_nuts",
+   "verdict": "FAIL",
+   "findings": [
+    "UNCERTAIN_EXTRA:screw_short",
+    "MISSING:nut",
+    "EXTRA:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/135.png",
+   "group": "logical",
+   "stratum": "1_additional_washer+1_missing_nut",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:nut",
+    "EXTRA:washer"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/136.png",
+   "group": "logical",
+   "stratum": "1_additional_nut+1_missing_washer",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:nut",
+    "MISSING:washer"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/004.png",
+   "group": "structural",
+   "stratum": "bag_broken",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/005.png",
+   "group": "structural",
+   "stratum": "bag_broken",
+   "verdict": "FAIL",
+   "findings": [
+    "UNCERTAIN_EXTRA:screw_long",
+    "MISSING:screw_short"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/006.png",
+   "group": "structural",
+   "stratum": "bag_broken",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/013.png",
+   "group": "structural",
+   "stratum": "bag_broken",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/015.png",
+   "group": "structural",
+   "stratum": "bag_broken",
+   "verdict": "REVIEW",
+   "findings": [
+    "UNCERTAIN_PART:screw_short"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/019.png",
+   "group": "structural",
+   "stratum": "part_broken",
+   "verdict": "REVIEW",
+   "findings": [
+    "UNCERTAIN_PART:nut",
+    "UNCERTAIN_EXTRA:washer"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/021.png",
+   "group": "structural",
+   "stratum": "part_broken",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/022.png",
+   "group": "structural",
+   "stratum": "part_broken",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/024.png",
+   "group": "structural",
+   "stratum": "part_broken",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/025.png",
+   "group": "structural",
+   "stratum": "part_broken",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/029.png",
+   "group": "structural",
+   "stratum": "part_broken",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/034.png",
+   "group": "structural",
+   "stratum": "part_broken",
+   "verdict": "REVIEW",
+   "findings": [
+    "UNCERTAIN_EXTRA:screw_long"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/037.png",
+   "group": "structural",
+   "stratum": "part_broken",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/041.png",
+   "group": "structural",
+   "stratum": "color",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/046.png",
+   "group": "structural",
+   "stratum": "color",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/049.png",
+   "group": "structural",
+   "stratum": "color",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/054.png",
+   "group": "structural",
+   "stratum": "color",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/055.png",
+   "group": "structural",
+   "stratum": "color",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:nut",
+    "MISSING:washer"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/057.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/061.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "FAIL",
+   "findings": [
+    "UNCERTAIN_PART:screw_long",
+    "UNCERTAIN_EXTRA:screw_short",
+    "EXTRA:washer"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/068.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/069.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "FAIL",
+   "findings": [
+    "UNCERTAIN_EXTRA:screw_long",
+    "EXTRA:washer"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/071.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/073.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "REVIEW",
+   "findings": [
+    "UNCERTAIN_EXTRA:screw_short"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/074.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "PASS",
+   "findings": []
+  },
+  {
+   "image": "test/structural_anomalies/075.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:washer"
+   ]
+  }
+ ]
+}

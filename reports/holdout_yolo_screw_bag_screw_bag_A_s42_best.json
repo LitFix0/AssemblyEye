@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-11-14T14:04:40+00:00",
+  "dataset": "data\\processed\\yolo_screw_bag",
+  "weights": "models\\screw_bag_A_s42_best.pt",
+  "weights_fingerprint": "5ac8ab93847f",
+  "imgsz": 640,
+  "holdout_images": 8,
+  "rerun": false,
+  "overall": {
+    "boxes": 48,
+    "precision": 0.9868041429935304,
+    "recall": 1.0,
+    "map50": 0.995,
+    "map50_95": 0.8600270517676769
+  },
+  "per_class": {
+    "screw_long": {
+      "boxes": 8,
+      "precision": 0.9927288041950226,
+      "recall": 1.0,
+      "map50": 0.995,
+      "map50_95": 0.874125
+    },
+    "screw_short": {
+      "boxes": 8,
+      "precision": 0.9781413860093805,
+      "recall": 1.0,
+      "map50": 0.995,
+      "map50_95": 0.7821666666666667
+    },
+    "nut": {
+      "boxes": 16,
+      "precision": 0.9876558356995981,
+      "recall": 1.0,
+      "map50": 0.995,
+      "map50_95": 0.8730347222222223
+    },
+    "washer": {
+      "boxes": 16,
+      "precision": 0.9886905460701201,
+      "recall": 1.0,
+      "map50": 0.995,
+      "map50_95": 0.9107818181818181
+    }
+  }
+}
