@@ -1,0 +1,14 @@
+# Which spec, weights and image size serve each product through the API.
+# Paths are relative to the repo root. The cross-class suppression flags match the DEV evaluations
+# (scripts/eval_defects.py): screw_bag was evaluated WITH suppression, splicing without.
+products:
+  screw_bag:
+    spec: configs/products/screw_bag.yaml
+    weights: models/screw_bag_A_s42_best.pt
+    imgsz: 640
+    cross_class_suppression: true
+  splicing_connectors:
+    spec: configs/products/splicing_connectors.yaml
+    weights: models/splicing_v2_best.pt
+    imgsz: 960
+    cross_class_suppression: false

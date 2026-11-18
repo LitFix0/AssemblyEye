@@ -50,3 +50,5 @@ data/annotation/*/images/
 
 reports/label_checks/
 reports/predictions/
+# API evidence files
+data/inspections/
