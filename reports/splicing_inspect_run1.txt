@@ -1,0 +1,395 @@
+﻿splicing_connectors: 46 image(s), select=all, detector yolo:splicing_v2_best.pt@76c47f1e0822 imgsz=960 min_conf=0.1
+cable thresholds: accept 0.4, review 0.2
+
+test/good/030.png  [good]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.93  confident (153,205,440,506)
+  connector_3  0.89  confident (1194,272,1489,573)
+  cable        0.47  confident (437,267,1199,362)
+  cable        0.26  uncertain (427,289,1201,386)
+    cable 0.26 vs top cable 0.47: IoU 0.60, overlap-of-smaller 0.76, centre distance 1.2% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour blue 90%; connector type connector_3 (needs blue)
+
+test/good/048.png  [good]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.95  confident (1292,331,1580,552)
+  connector_2  0.94  confident (40,231,327,446)
+  cable        0.40  confident (318,278,1307,380)
+  cable        0.33  uncertain (318,298,1304,400)
+    cable 0.33 vs top cable 0.40: IoU 0.67, overlap-of-smaller 0.80, centre distance 1.1% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour yellow 73%; connector type connector_2 (needs yellow)
+
+test/good/070.png  [good]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.97  confident (235,176,528,636)
+  connector_5  0.97  confident (1108,200,1406,657)
+  cable        0.47  confident (522,463,1113,525)
+  cable        0.33  uncertain (526,470,1119,552)
+    cable 0.33 vs top cable 0.47: IoU 0.60, overlap-of-smaller 0.87, centre distance 1.0% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 91%; connector type connector_5 (needs red)
+
+test/good/071.png  [good]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.94  confident (1216,311,1508,531)
+  connector_2  0.93  confident (203,279,495,493)
+  cable        0.50  confident (497,317,1223,412)
+  cable        0.28  uncertain (487,336,1222,425)
+    cable 0.28 vs top cable 0.50: IoU 0.70, overlap-of-smaller 0.84, centre distance 0.9% of diagonal
+    top cable: gaps to connectors 2 / 0 px; colour yellow 68%; connector type connector_2 (needs yellow)
+
+test/good/077.png  [good]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.93  confident (1272,273,1563,578)
+  connector_3  0.87  confident (186,311,476,607)
+  cable        0.50  confident (463,296,1277,373)
+  cable        0.23  uncertain (465,292,1282,408)
+    cable 0.23 vs top cable 0.50: IoU 0.66, overlap-of-smaller 1.00, centre distance 0.8% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour blue 91%; connector type connector_3 (needs blue)
+
+test/good/082.png  [good]  REVIEW  UNCERTAIN_PART:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.96  confident (1248,226,1546,687)
+  connector_5  0.94  confident (68,111,384,582)
+  cable        0.39  uncertain (363,336,1244,479)
+  cable        0.32  uncertain (315,375,1247,476)
+  cable        0.22  uncertain (371,401,1254,474)
+    cable 0.32 vs top cable 0.39: IoU 0.67, overlap-of-smaller 0.95, centre distance 1.5% of diagonal
+    cable 0.22 vs top cable 0.39: IoU 0.50, overlap-of-smaller 0.99, centre distance 1.7% of diagonal
+    top cable: gaps to connectors 0 / 4 px; colour red 81%; connector type connector_5 (needs red)
+
+test/good/083.png  [good]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.97  confident (230,227,521,690)
+  connector_5  0.97  confident (1201,289,1503,751)
+  cable        0.48  confident (512,463,1204,558)
+  cable        0.26  uncertain (511,448,1187,535)
+    cable 0.26 vs top cable 0.48: IoU 0.64, overlap-of-smaller 0.83, centre distance 1.1% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 87%; connector type connector_5 (needs red)
+
+test/good/091.png  [good]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.96  confident (1237,288,1534,754)
+  connector_5  0.96  confident (101,226,392,682)
+  cable        0.44  confident (383,425,1246,544)
+  cable        0.24  uncertain (378,475,1247,557)
+    cable 0.24 vs top cable 0.44: IoU 0.52, overlap-of-smaller 0.84, centre distance 1.7% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 85%; connector type connector_5 (needs red)
+
+test/good/092.png  [good]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.98  confident (182,168,477,630)
+  connector_5  0.96  confident (1182,183,1478,645)
+  cable        0.47  confident (476,517,1192,591)
+  cable        0.32  uncertain (470,525,1195,612)
+    cable 0.32 vs top cable 0.47: IoU 0.69, overlap-of-smaller 0.90, centre distance 0.8% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 90%; connector type connector_5 (needs red)
+
+test/good/094.png  [good]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.96  confident (1281,390,1574,609)
+  connector_2  0.95  confident (172,303,465,520)
+  cable        0.50  confident (458,422,1297,513)
+  cable        0.30  uncertain (462,435,1291,543)
+    cable 0.30 vs top cable 0.50: IoU 0.64, overlap-of-smaller 0.85, centre distance 1.1% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour yellow 69%; connector type connector_2 (needs yellow)
+
+test/good/103.png  [good]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.94  confident (259,292,546,511)
+  connector_2  0.94  confident (1244,270,1530,487)
+  cable        0.53  confident (540,292,1246,371)
+  cable        0.31  uncertain (537,295,1240,398)
+    cable 0.31 vs top cable 0.53: IoU 0.70, overlap-of-smaller 0.95, centre distance 0.8% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour yellow 74%; connector type connector_2 (needs yellow)
+
+test/good/112.png  [good]  REVIEW  UNCERTAIN_PART:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.97  confident (1314,253,1608,712)
+  connector_5  0.96  confident (27,164,322,618)
+  cable        0.38  uncertain (314,508,1315,594)
+  cable        0.34  uncertain (320,506,1313,629)
+    cable 0.34 vs top cable 0.38: IoU 0.70, overlap-of-smaller 0.99, centre distance 0.9% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 88%; connector type connector_5 (needs red)
+
+test/logical_anomalies/000.png  [cable_cut]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.94  confident (163,314,465,617)
+  connector_3  0.85  confident (1291,361,1588,659)
+  cable        0.52  confident (445,531,1297,648)
+  cable        0.33  uncertain (442,537,1297,619)
+    cable 0.33 vs top cable 0.52: IoU 0.70, overlap-of-smaller 1.00, centre distance 0.6% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour blue 88%; connector type connector_3 (needs blue)
+
+test/logical_anomalies/048.png  [extra_cable]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.92  confident (160,301,455,606)
+  connector_3  0.91  confident (1258,340,1550,639)
+  cable        0.44  confident (449,464,1272,569)
+  cable        0.37  uncertain (448,345,1273,442)
+  cable        0.27  uncertain (443,426,1266,597)
+  cable        0.24  uncertain (452,345,1272,497)
+    cable 0.37 vs top cable 0.44: IoU 0.00, overlap-of-smaller 0.00, centre distance 6.5% of diagonal
+    cable 0.27 vs top cable 0.44: IoU 0.61, overlap-of-smaller 0.99, centre distance 0.4% of diagonal
+    cable 0.24 vs top cable 0.44: IoU 0.15, overlap-of-smaller 0.32, centre distance 5.0% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour blue 87%; connector type connector_3 (needs blue)
+
+test/logical_anomalies/057.png  [extra_cable]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.96  confident (1196,344,1484,557)
+  connector_2  0.95  confident (181,275,469,500)
+  cable        0.49  confident (451,369,1195,506)
+    top cable: gaps to connectors 0 / 1 px; colour yellow 75%; connector type connector_2 (needs yellow)
+
+test/logical_anomalies/063.png  [cable_too_short_T2]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.94  confident (959,329,1245,544)
+  connector_2  0.94  confident (518,300,809,520)
+  cable        0.55  confident (800,434,962,506)
+    top cable: gaps to connectors 0 / 0 px; colour yellow 59%; connector type connector_2 (needs yellow)
+
+test/logical_anomalies/064.png  [cable_too_short_T5]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.96  confident (449,148,750,604)
+  connector_5  0.96  confident (893,159,1189,616)
+  cable        0.50  confident (737,350,900,415)
+  cable        0.23  uncertain (736,356,899,462)
+    cable 0.23 vs top cable 0.50: IoU 0.52, overlap-of-smaller 0.91, centre distance 1.4% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 92%; connector type connector_5 (needs red)
+
+test/logical_anomalies/066.png  [cable_too_short_T3]  REVIEW  UNCERTAIN_PART:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.94  confident (974,258,1266,566)
+  connector_3  0.91  confident (522,290,816,598)
+  cable        0.35  uncertain (807,394,979,475)
+  cable        0.21  uncertain (808,397,980,537)
+    cable 0.21 vs top cable 0.35: IoU 0.54, overlap-of-smaller 0.96, centre distance 1.7% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour blue 87%; connector type connector_3 (needs blue)
+
+test/logical_anomalies/080.png  [cable_color]  REVIEW  UNCERTAIN_PART:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.96  confident (1371,293,1657,522)
+  connector_2  0.89  confident (142,231,426,448)
+  cable        0.39  uncertain (407,295,1375,394)
+    top cable: gaps to connectors 0 / 0 px; colour blue 90%; connector type connector_2 (needs yellow)
+
+test/logical_anomalies/083.png  [wrong_cable_location]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.97  confident (208,150,502,610)
+  connector_5  0.96  confident (1160,150,1460,611)
+  cable        0.44  confident (494,261,1164,375)
+  cable        0.37  uncertain (496,252,1166,343)
+  cable        0.28  uncertain (491,289,1166,388)
+    cable 0.37 vs top cable 0.44: IoU 0.66, overlap-of-smaller 0.90, centre distance 1.1% of diagonal
+    cable 0.28 vs top cable 0.44: IoU 0.68, overlap-of-smaller 0.87, centre distance 1.1% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 85%; connector type connector_5 (needs red)
+
+test/logical_anomalies/089.png  [wrong_cable_location]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.97  confident (1254,233,1555,697)
+  connector_5  0.97  confident (125,171,425,632)
+  cable        0.41  confident (409,291,1256,494)
+  cable        0.26  uncertain (412,315,1258,561)
+  cable        0.20  uncertain (417,413,1256,568)
+    cable 0.26 vs top cable 0.41: IoU 0.66, overlap-of-smaller 0.88, centre distance 2.4% of diagonal
+    cable 0.20 vs top cable 0.41: IoU 0.29, overlap-of-smaller 0.52, centre distance 5.2% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 70%; connector type connector_5 (needs red)
+
+test/logical_anomalies/096.png  [wrong_cable_location]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.96  confident (132,216,439,673)
+  connector_5  0.96  confident (1226,227,1525,683)
+  cable        0.47  confident (415,435,1238,554)
+    top cable: gaps to connectors 0 / 0 px; colour red 85%; connector type connector_5 (needs red)
+
+test/logical_anomalies/101.png  [wrong_cable_location]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.93  confident (1206,328,1497,632)
+  connector_3  0.90  confident (127,269,427,569)
+  cable        0.45  confident (417,460,1217,544)
+    top cable: gaps to connectors 0 / 0 px; colour blue 91%; connector type connector_3 (needs blue)
+
+test/logical_anomalies/105.png  [wrong_cable_location]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.97  confident (93,256,385,715)
+  connector_5  0.96  confident (1322,249,1611,702)
+  cable        0.43  confident (375,289,1334,429)
+  cable        0.39  uncertain (343,272,1331,376)
+    cable 0.39 vs top cable 0.43: IoU 0.54, overlap-of-smaller 0.81, centre distance 2.0% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 84%; connector type connector_5 (needs red)
+
+test/logical_anomalies/106.png  [wrong_cable_location]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.93  confident (1244,324,1533,635)
+  connector_3  0.92  confident (213,326,497,632)
+  cable        0.40  confident (490,402,1253,541)
+  cable        0.27  uncertain (480,426,1257,587)
+    cable 0.27 vs top cable 0.40: IoU 0.61, overlap-of-smaller 0.83, centre distance 1.9% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour blue 83%; connector type connector_3 (needs blue)
+
+test/structural_anomalies/001.png  [broken_cable]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.91  confident (1219,298,1511,606)
+  connector_3  0.89  confident (121,228,425,527)
+  cable        0.45  confident (416,425,1235,550)
+  cable        0.26  uncertain (395,461,1226,557)
+    cable 0.26 vs top cable 0.45: IoU 0.65, overlap-of-smaller 0.90, centre distance 1.4% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour blue 86%; connector type connector_3 (needs blue)
+
+test/structural_anomalies/004.png  [broken_cable]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.92  confident (170,232,466,534)
+  connector_3  0.91  confident (1209,313,1525,613)
+  cable        0.44  confident (455,316,1243,445)
+  cable        0.29  uncertain (363,349,1239,445)
+    cable 0.29 vs top cable 0.44: IoU 0.68, overlap-of-smaller 0.89, centre distance 2.7% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour blue 84%; connector type connector_3 (needs blue)
+
+test/structural_anomalies/005.png  [broken_cable]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.92  confident (1247,282,1544,589)
+  connector_3  0.91  confident (198,257,503,557)
+  cable        0.59  confident (501,305,1267,402)
+    top cable: gaps to connectors 0 / 0 px; colour blue 88%; connector type connector_3 (needs blue)
+
+test/structural_anomalies/006.png  [broken_cable]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.94  confident (1239,322,1523,539)
+  connector_2  0.90  confident (228,292,517,505)
+  cable        0.50  confident (509,291,1244,371)
+    top cable: gaps to connectors 0 / 0 px; colour yellow 75%; connector type connector_2 (needs yellow)
+
+test/structural_anomalies/013.png  [broken_connector]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.92  confident (146,206,450,515)
+  connector_3  0.90  confident (1285,286,1578,595)
+  cable        0.47  confident (433,321,1296,436)
+  cable        0.23  uncertain (444,360,1294,454)
+    cable 0.23 vs top cable 0.47: IoU 0.56, overlap-of-smaller 0.81, centre distance 1.5% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour blue 89%; connector type connector_3 (needs blue)
+
+test/structural_anomalies/015.png  [broken_connector]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.98  confident (1201,165,1495,624)
+  connector_5  0.96  confident (206,175,497,635)
+  cable        0.51  confident (491,360,1210,451)
+    top cable: gaps to connectors 0 / 0 px; colour red 90%; connector type connector_5 (needs red)
+
+test/structural_anomalies/019.png  [broken_connector]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.96  confident (1215,336,1510,551)
+  connector_2  0.94  confident (171,242,476,463)
+  cable        0.51  confident (475,284,1227,389)
+    top cable: gaps to connectors 0 / 0 px; colour yellow 74%; connector type connector_2 (needs yellow)
+
+test/structural_anomalies/022.png  [broken_connector]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.97  confident (1307,197,1598,653)
+  connector_5  0.96  confident (160,112,471,580)
+  cable        0.43  confident (465,252,1315,347)
+  cable        0.30  uncertain (455,276,1314,356)
+    cable 0.30 vs top cable 0.43: IoU 0.69, overlap-of-smaller 0.89, centre distance 0.9% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 88%; connector type connector_5 (needs red)
+
+test/structural_anomalies/024.png  [cable_not_plugged]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.96  confident (82,413,369,633)
+  connector_2  0.90  confident (1330,350,1618,566)
+  cable        0.46  confident (365,351,1334,506)
+  cable        0.38  uncertain (366,361,1333,451)
+  cable        0.35  uncertain (368,382,1332,534)
+    cable 0.38 vs top cable 0.46: IoU 0.58, overlap-of-smaller 1.00, centre distance 1.2% of diagonal
+    cable 0.35 vs top cable 0.46: IoU 0.68, overlap-of-smaller 0.82, centre distance 1.6% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour yellow 66%; connector type connector_2 (needs yellow)
+
+test/structural_anomalies/034.png  [color]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.97  confident (1256,238,1548,703)
+  connector_5  0.95  confident (65,153,370,616)
+  cable        0.48  confident (335,458,1253,536)
+  cable        0.30  uncertain (332,464,1256,567)
+    cable 0.30 vs top cable 0.48: IoU 0.66, overlap-of-smaller 0.92, centre distance 1.0% of diagonal
+    top cable: gaps to connectors 0 / 3 px; colour red 89%; connector type connector_5 (needs red)
+
+test/structural_anomalies/037.png  [color]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.92  confident (1194,335,1488,636)
+  connector_3  0.90  confident (244,283,535,578)
+  cable        0.50  confident (531,493,1200,579)
+    top cable: gaps to connectors 0 / 0 px; colour blue 90%; connector type connector_3 (needs blue)
+
+test/structural_anomalies/040.png  [color]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_2  0.96  confident (1280,386,1567,603)
+  connector_2  0.95  confident (181,343,466,556)
+  cable        0.50  confident (459,456,1282,540)
+  cable        0.25  uncertain (456,469,1286,559)
+    cable 0.25 vs top cable 0.50: IoU 0.68, overlap-of-smaller 0.84, centre distance 0.9% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour yellow 64%; connector type connector_2 (needs yellow)
+
+test/structural_anomalies/054.png  [contamination]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.96  confident (1218,146,1513,601)
+  connector_5  0.96  confident (250,140,551,598)
+  cable        0.52  confident (552,251,1226,327)
+    top cable: gaps to connectors 1 / 0 px; colour red 90%; connector type connector_5 (needs red)
+
+test/structural_anomalies/055.png  [flipped_connector]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.96  confident (181,223,492,683)
+  connector_5  0.96  confident (1231,253,1534,712)
+  cable        0.49  confident (473,497,1230,579)
+    top cable: gaps to connectors 0 / 1 px; colour red 89%; connector type connector_5 (needs red)
+
+test/structural_anomalies/056.png  [flipped_connector]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.92  confident (215,299,502,595)
+  connector_3  0.75  confident (1321,266,1636,582)
+  cable        0.53  confident (488,440,1342,535)
+  cable        0.24  uncertain (488,430,1342,568)
+    cable 0.24 vs top cable 0.53: IoU 0.69, overlap-of-smaller 1.00, centre distance 0.6% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour blue 87%; connector type connector_3 (needs blue)
+
+test/structural_anomalies/057.png  [flipped_connector]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.95  confident (222,269,507,573)
+  connector_3  0.84  confident (1249,307,1565,610)
+  cable        0.44  confident (500,419,1268,513)
+    top cable: gaps to connectors 0 / 0 px; colour blue 87%; connector type connector_3 (needs blue)
+
+test/structural_anomalies/061.png  [flipped_connector]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.93  confident (254,247,560,551)
+  connector_3  0.81  confident (1274,270,1585,577)
+  cable        0.51  confident (554,380,1303,479)
+    top cable: gaps to connectors 0 / 0 px; colour blue 88%; connector type connector_3 (needs blue)
+
+test/structural_anomalies/073.png  [open_lever]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.97  confident (197,204,491,661)
+  connector_5  0.96  confident (1217,207,1522,664)
+  cable        0.49  confident (484,344,1231,422)
+    top cable: gaps to connectors 0 / 0 px; colour red 90%; connector type connector_5 (needs red)
+
+test/structural_anomalies/074.png  [open_lever]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.94  confident (226,317,510,618)
+  connector_3  0.89  confident (1227,328,1520,648)
+  cable        0.42  confident (444,420,1232,539)
+    top cable: gaps to connectors 0 / 0 px; colour blue 84%; connector type connector_3 (needs blue)
+
+test/structural_anomalies/075.png  [open_lever]  REVIEW  UNCERTAIN_EXTRA:cable
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_5  0.97  confident (151,150,442,606)
+  connector_5  0.97  confident (1250,208,1544,665)
+  cable        0.46  confident (435,208,1264,308)
+  cable        0.28  uncertain (429,238,1259,310)
+    cable 0.28 vs top cable 0.46: IoU 0.68, overlap-of-smaller 0.96, centre distance 0.9% of diagonal
+    top cable: gaps to connectors 0 / 0 px; colour red 87%; connector type connector_5 (needs red)
+
+test/structural_anomalies/076.png  [open_lever]  PASS  -
+  image 1700x850, diagonal 1901 px, tolerance 38 px
+  connector_3  0.90  confident (165,289,452,597)
+  connector_3  0.78  confident (1210,326,1516,641)
+  cable        0.46  confident (452,479,1217,570)
+    top cable: gaps to connectors 0 / 0 px; colour blue 89%; connector type connector_3 (needs blue)
+

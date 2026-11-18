@@ -1,7 +1,7 @@
 from app.core.image_io import LoadedImage, load_image
 from app.schemas.inspection import Detection, ImageInfo, InspectionResult
 from app.schemas.spec import ProductSpec
-from app.services.verification.count_rules import verify_counts
+from app.services.verification.engine import verify_product
 
 
 def run_inspection(image_path, spec: ProductSpec, detections: list[Detection],
@@ -13,7 +13,7 @@ def run_inspection(image_path, spec: ProductSpec, detections: list[Detection],
             raise ValueError(
                 f"detection '{d.class_name}' bbox is outside the image ({img.width}x{img.height})"
             )
-    status, findings = verify_counts(detections, spec)
+    status, findings = verify_product(detections, spec, img.bgr)
     result = InspectionResult(
         product=spec.product,
         spec_version=spec.version,

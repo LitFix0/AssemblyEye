@@ -17,14 +17,15 @@ from app.services.visualization.draw import draw_result
 REPO = Path(__file__).resolve().parents[2]
 
 
-def det(cls, conf, x2=50):
-    return Detection(class_name=cls, confidence=conf, bbox=BBox(x1=10, y1=10, x2=x2, y2=50))
+def det(cls, conf, x2=50, x1=10):
+    return Detection(class_name=cls, confidence=conf, bbox=BBox(x1=x1, y1=10, x2=x2, y2=50))
 
 
 def normal_parts():
-    # order: screw_long, screw_short, nut, nut, washer, washer
-    return [det("screw_long", .9), det("screw_short", .9), det("nut", .9),
-            det("nut", .9), det("washer", .9), det("washer", .9)]
+    # order: screw_long, screw_short, nut, nut, washer, washer. Spaced apart: identical boxes for
+    # screw_long and screw_short would (correctly) read as one object seen as both classes.
+    return [det(c, .9, x1=10 + 50 * i, x2=50 + 50 * i)
+            for i, c in enumerate(["screw_long", "screw_short", "nut", "nut", "washer", "washer"])]
 
 
 @pytest.fixture

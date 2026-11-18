@@ -21,6 +21,7 @@ def draw_result(bgr: np.ndarray, result: InspectionResult, spec: ProductSpec) ->
     t = spec.thresholds
 
     for d in result.detections:
+        t = spec.thresholds_for(d.class_name)  # per-class thresholds, so a cable at 0.45 is not drawn as noise
         if d.confidence >= t.accept_conf:
             color = CONFIDENT_BGR
         elif d.confidence >= t.review_conf:

@@ -1,8 +1,9 @@
 product: screw_bag
-version: "0.1-placeholder"
+version: "0.2-st04"
 description: >
-  ST-01 placeholder spec. Counts are inferred from MVTec defect names and a few
-  viewed normal images; verify in ST-02. Thresholds are untuned placeholders.
+  Counts per ST-02/ST-03 (1 long screw, 1 short screw, 2 nuts, 2 washers). Thresholds are untuned
+  placeholders. ST-04: screw_long and screw_short are declared confusable, so the same object read as
+  both, or the right number of screws with the wrong long/short split, gives REVIEW instead of FAIL.
 thresholds:
   accept_conf: 0.60
   review_conf: 0.30
@@ -11,3 +12,7 @@ required_counts:
   screw_short: 1
   nut: 2
   washer: 2
+competing_classes:
+  - [screw_long, screw_short]
+competing_iou: 0.7
+duplicate_iou: 0.7

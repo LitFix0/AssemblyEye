@@ -1,0 +1,38 @@
+﻿
+splicing_connectors  DEV split: 98 images
+detector: yolo:splicing_v2_best.pt@76c47f1e0822 imgsz=960 min_conf=0.1
+spec: splicing_connectors v0.1-st04
+thresholds: accept 0.6, review 0.3; cable: accept 0.4, review 0.2
+cross-class suppression before the rules: off
+
+group / defect type                              n  PASS  REVIEW  FAIL  flagged
+== normal                                       36    24      12     0      33%
+== logical                                      35     4       9    22      89%
+   cable_color                                   4     0       1     3     100%
+   cable_cut                                     4     0       1     3     100%
+   cable_too_short_T2                            1     1       0     0       0%
+   cable_too_short_T3                            1     0       1     0     100%
+   cable_too_short_T5                            1     0       1     0     100%
+   extra_cable                                   4     1       1     2      75%
+   missing_cable                                 4     0       0     4     100%
+   missing_connector                             4     0       0     4     100%
+   missing_connector_and_cable                   1     0       0     1     100%
+   wrong_cable_location                          8     2       4     2      75%
+   wrong_connector_type_3_2                      1     0       0     1     100%
+   wrong_connector_type_5_2                      1     0       0     1     100%
+   wrong_connector_type_5_3                      1     0       0     1     100%
+== structural                                   27    12      11     4      56%
+   broken_cable                                  4     2       2     0      50%
+   broken_connector                              4     2       2     0      50%
+   cable_not_plugged                             3     0       1     2     100%
+   color                                         3     1       2     0      67%
+   contamination                                 3     1       0     2      67%
+   flipped_connector                             4     3       1     0      25%
+   open_lever                                    4     3       1     0      25%
+   unknown_cable_color                           2     0       2     0     100%
+
+why normal images were flagged (finding code:class -> images):
+   UNCERTAIN_EXTRA:cable                         10
+   UNCERTAIN_PART:cable                           2
+
+wrote reports\eval_defects_splicing_connectors_splicing_v2_best_a0.6_r0.3.json

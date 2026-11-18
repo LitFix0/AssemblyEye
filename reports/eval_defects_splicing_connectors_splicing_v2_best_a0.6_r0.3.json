@@ -1,0 +1,1117 @@
+{
+ "category": "splicing_connectors",
+ "detector": "yolo:splicing_v2_best.pt@76c47f1e0822 imgsz=960 min_conf=0.1",
+ "split": "dev",
+ "suppress": false,
+ "spec_version": "0.2-st04",
+ "accept": 0.6,
+ "review": 0.3,
+ "groups": {
+  "normal": {
+   "PASS": 34,
+   "REVIEW": 2,
+   "FAIL": 0,
+   "n": 36
+  },
+  "logical": {
+   "PASS": 8,
+   "REVIEW": 3,
+   "FAIL": 24,
+   "n": 35
+  },
+  "structural": {
+   "PASS": 21,
+   "REVIEW": 2,
+   "FAIL": 4,
+   "n": 27
+  }
+ },
+ "strata": {
+  "good": {
+   "PASS": 34,
+   "REVIEW": 2,
+   "FAIL": 0,
+   "n": 36,
+   "group": "normal"
+  },
+  "cable_cut": {
+   "PASS": 1,
+   "REVIEW": 0,
+   "FAIL": 3,
+   "n": 4,
+   "group": "logical"
+  },
+  "wrong_connector_type_5_3": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 1,
+   "n": 1,
+   "group": "logical"
+  },
+  "wrong_connector_type_3_2": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 1,
+   "n": 1,
+   "group": "logical"
+  },
+  "wrong_connector_type_5_2": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 1,
+   "n": 1,
+   "group": "logical"
+  },
+  "missing_cable": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 4,
+   "n": 4,
+   "group": "logical"
+  },
+  "missing_connector_and_cable": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 1,
+   "n": 1,
+   "group": "logical"
+  },
+  "missing_connector": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 4,
+   "n": 4,
+   "group": "logical"
+  },
+  "extra_cable": {
+   "PASS": 1,
+   "REVIEW": 1,
+   "FAIL": 2,
+   "n": 4,
+   "group": "logical"
+  },
+  "cable_too_short_T2": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 1,
+   "n": 1,
+   "group": "logical"
+  },
+  "cable_too_short_T5": {
+   "PASS": 0,
+   "REVIEW": 0,
+   "FAIL": 1,
+   "n": 1,
+   "group": "logical"
+  },
+  "cable_too_short_T3": {
+   "PASS": 0,
+   "REVIEW": 1,
+   "FAIL": 0,
+   "n": 1,
+   "group": "logical"
+  },
+  "cable_color": {
+   "PASS": 0,
+   "REVIEW": 1,
+   "FAIL": 3,
+   "n": 4,
+   "group": "logical"
+  },
+  "wrong_cable_location": {
+   "PASS": 6,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 8,
+   "group": "logical"
+  },
+  "broken_cable": {
+   "PASS": 4,
+   "REVIEW": 0,
+   "FAIL": 0,
+   "n": 4,
+   "group": "structural"
+  },
+  "broken_connector": {
+   "PASS": 4,
+   "REVIEW": 0,
+   "FAIL": 0,
+   "n": 4,
+   "group": "structural"
+  },
+  "cable_not_plugged": {
+   "PASS": 1,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 3,
+   "group": "structural"
+  },
+  "color": {
+   "PASS": 3,
+   "REVIEW": 0,
+   "FAIL": 0,
+   "n": 3,
+   "group": "structural"
+  },
+  "contamination": {
+   "PASS": 1,
+   "REVIEW": 0,
+   "FAIL": 2,
+   "n": 3,
+   "group": "structural"
+  },
+  "flipped_connector": {
+   "PASS": 4,
+   "REVIEW": 0,
+   "FAIL": 0,
+   "n": 4,
+   "group": "structural"
+  },
+  "unknown_cable_color": {
+   "PASS": 0,
+   "REVIEW": 2,
+   "FAIL": 0,
+   "n": 2,
+   "group": "structural"
+  },
+  "open_lever": {
+   "PASS": 4,
+   "REVIEW": 0,
+   "FAIL": 0,
+   "n": 4,
+   "group": "structural"
+  }
+ },
+ "rows": [
+  {
+   "image": "test/good/003.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/009.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/013.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/014.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/019.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/030.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/035.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/036.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/037.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/039.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/040.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/047.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/048.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/056.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/064.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/066.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/070.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/071.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/077.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/081.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/082.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "REVIEW",
+   "findings": [
+    "UNCERTAIN_PART:cable"
+   ],
+   "messages": [
+    "cable: expected 1; only 0 confident, 1 low-confidence - needs human check"
+   ]
+  },
+  {
+   "image": "test/good/083.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/091.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/092.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/094.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/095.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/096.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/097.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/099.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/103.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/106.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/108.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/112.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "REVIEW",
+   "findings": [
+    "UNCERTAIN_PART:cable"
+   ],
+   "messages": [
+    "cable: expected 1; only 0 confident, 1 low-confidence - needs human check"
+   ]
+  },
+  {
+   "image": "test/good/113.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/115.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/good/117.png",
+   "group": "normal",
+   "stratum": "good",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/logical_anomalies/000.png",
+   "group": "logical",
+   "stratum": "cable_cut",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/logical_anomalies/002.png",
+   "group": "logical",
+   "stratum": "cable_cut",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 2 confident (extra part?)"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/003.png",
+   "group": "logical",
+   "stratum": "cable_cut",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 2 confident (extra part?)"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/004.png",
+   "group": "logical",
+   "stratum": "cable_cut",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 3 confident (extra part?)"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/012.png",
+   "group": "logical",
+   "stratum": "wrong_connector_type_5_3",
+   "verdict": "FAIL",
+   "findings": [
+    "CONNECTOR_TYPE_MISMATCH:connector"
+   ],
+   "messages": [
+    "The two connectors differ (connector_3 and connector_5); a pair must have the same clamp count."
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/014.png",
+   "group": "logical",
+   "stratum": "wrong_connector_type_3_2",
+   "verdict": "FAIL",
+   "findings": [
+    "CONNECTOR_TYPE_MISMATCH:connector"
+   ],
+   "messages": [
+    "The two connectors differ (connector_2 and connector_3); a pair must have the same clamp count."
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/020.png",
+   "group": "logical",
+   "stratum": "wrong_connector_type_5_2",
+   "verdict": "FAIL",
+   "findings": [
+    "CONNECTOR_TYPE_MISMATCH:connector"
+   ],
+   "messages": [
+    "The two connectors differ (connector_2 and connector_5); a pair must have the same clamp count."
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/024.png",
+   "group": "logical",
+   "stratum": "missing_cable",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 0 confident + 0 uncertain"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/029.png",
+   "group": "logical",
+   "stratum": "missing_cable",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 0 confident + 0 uncertain"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/031.png",
+   "group": "logical",
+   "stratum": "missing_cable",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 0 confident + 0 uncertain"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/032.png",
+   "group": "logical",
+   "stratum": "missing_cable",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 0 confident + 0 uncertain"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/034.png",
+   "group": "logical",
+   "stratum": "missing_connector_and_cable",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:connector",
+    "MISSING:cable"
+   ],
+   "messages": [
+    "connector: expected 2, found 0 confident + 0 uncertain",
+    "cable: expected 1, found 0 confident + 0 uncertain"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/036.png",
+   "group": "logical",
+   "stratum": "missing_connector",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:connector"
+   ],
+   "messages": [
+    "connector: expected 2, found 1 confident + 0 uncertain"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/039.png",
+   "group": "logical",
+   "stratum": "missing_connector",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:connector",
+    "UNCERTAIN_PART:cable"
+   ],
+   "messages": [
+    "connector: expected 2, found 1 confident + 0 uncertain",
+    "cable: expected 1; only 0 confident, 1 low-confidence - needs human check"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/043.png",
+   "group": "logical",
+   "stratum": "missing_connector",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:connector",
+    "EXTRA:cable"
+   ],
+   "messages": [
+    "connector: expected 2, found 1 confident + 0 uncertain",
+    "cable: expected 1, found 2 confident (extra part?)"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/046.png",
+   "group": "logical",
+   "stratum": "missing_connector",
+   "verdict": "FAIL",
+   "findings": [
+    "MISSING:connector"
+   ],
+   "messages": [
+    "connector: expected 2, found 1 confident + 0 uncertain"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/047.png",
+   "group": "logical",
+   "stratum": "extra_cable",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 2 confident (extra part?)"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/048.png",
+   "group": "logical",
+   "stratum": "extra_cable",
+   "verdict": "REVIEW",
+   "findings": [
+    "UNCERTAIN_EXTRA:cable"
+   ],
+   "messages": [
+    "cable: expected 1; 1 extra low-confidence detection(s) - needs human check"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/056.png",
+   "group": "logical",
+   "stratum": "extra_cable",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 2 confident (extra part?)"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/057.png",
+   "group": "logical",
+   "stratum": "extra_cable",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/logical_anomalies/063.png",
+   "group": "logical",
+   "stratum": "cable_too_short_T2",
+   "verdict": "FAIL",
+   "findings": [
+    "CABLE_TOO_SHORT:cable"
+   ],
+   "messages": [
+    "Cable is too short: 162 px between its ends, minimum 342 px."
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/064.png",
+   "group": "logical",
+   "stratum": "cable_too_short_T5",
+   "verdict": "FAIL",
+   "findings": [
+    "CABLE_TOO_SHORT:cable"
+   ],
+   "messages": [
+    "Cable is too short: 163 px between its ends, minimum 342 px."
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/066.png",
+   "group": "logical",
+   "stratum": "cable_too_short_T3",
+   "verdict": "REVIEW",
+   "findings": [
+    "UNCERTAIN_PART:cable"
+   ],
+   "messages": [
+    "cable: expected 1; only 0 confident, 1 low-confidence - needs human check"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/074.png",
+   "group": "logical",
+   "stratum": "cable_color",
+   "verdict": "FAIL",
+   "findings": [
+    "CABLE_COLOR_MISMATCH:cable"
+   ],
+   "messages": [
+    "Cable looks red (87% of coloured pixels) but connector_2 needs yellow."
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/075.png",
+   "group": "logical",
+   "stratum": "cable_color",
+   "verdict": "FAIL",
+   "findings": [
+    "CABLE_COLOR_MISMATCH:cable"
+   ],
+   "messages": [
+    "Cable looks red (90% of coloured pixels) but connector_3 needs blue."
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/080.png",
+   "group": "logical",
+   "stratum": "cable_color",
+   "verdict": "REVIEW",
+   "findings": [
+    "UNCERTAIN_PART:cable"
+   ],
+   "messages": [
+    "cable: expected 1; only 0 confident, 1 low-confidence - needs human check"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/081.png",
+   "group": "logical",
+   "stratum": "cable_color",
+   "verdict": "FAIL",
+   "findings": [
+    "CABLE_COLOR_MISMATCH:cable"
+   ],
+   "messages": [
+    "Cable looks blue (91% of coloured pixels) but connector_5 needs red."
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/083.png",
+   "group": "logical",
+   "stratum": "wrong_cable_location",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/logical_anomalies/089.png",
+   "group": "logical",
+   "stratum": "wrong_cable_location",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/logical_anomalies/090.png",
+   "group": "logical",
+   "stratum": "wrong_cable_location",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 2 confident (extra part?)"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/096.png",
+   "group": "logical",
+   "stratum": "wrong_cable_location",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/logical_anomalies/100.png",
+   "group": "logical",
+   "stratum": "wrong_cable_location",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:cable"
+   ],
+   "messages": [
+    "cable: expected 1, found 2 confident (extra part?)"
+   ]
+  },
+  {
+   "image": "test/logical_anomalies/101.png",
+   "group": "logical",
+   "stratum": "wrong_cable_location",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/logical_anomalies/105.png",
+   "group": "logical",
+   "stratum": "wrong_cable_location",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/logical_anomalies/106.png",
+   "group": "logical",
+   "stratum": "wrong_cable_location",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/001.png",
+   "group": "structural",
+   "stratum": "broken_cable",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/004.png",
+   "group": "structural",
+   "stratum": "broken_cable",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/005.png",
+   "group": "structural",
+   "stratum": "broken_cable",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/006.png",
+   "group": "structural",
+   "stratum": "broken_cable",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/013.png",
+   "group": "structural",
+   "stratum": "broken_connector",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/015.png",
+   "group": "structural",
+   "stratum": "broken_connector",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/019.png",
+   "group": "structural",
+   "stratum": "broken_connector",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/022.png",
+   "group": "structural",
+   "stratum": "broken_connector",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/024.png",
+   "group": "structural",
+   "stratum": "cable_not_plugged",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/025.png",
+   "group": "structural",
+   "stratum": "cable_not_plugged",
+   "verdict": "FAIL",
+   "findings": [
+    "CABLE_MISPLACED:cable"
+   ],
+   "messages": [
+    "Cable sticks out 183 px past the far side of the left connector (allowed 38 px)."
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/029.png",
+   "group": "structural",
+   "stratum": "cable_not_plugged",
+   "verdict": "FAIL",
+   "findings": [
+    "CABLE_NOT_CONNECTED:cable"
+   ],
+   "messages": [
+    "Cable does not reach the left connector: gap 46 px (allowed 38 px)."
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/034.png",
+   "group": "structural",
+   "stratum": "color",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/037.png",
+   "group": "structural",
+   "stratum": "color",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/040.png",
+   "group": "structural",
+   "stratum": "color",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/046.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:connector"
+   ],
+   "messages": [
+    "connector: expected 2, found 3 confident (extra part?)"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/049.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "FAIL",
+   "findings": [
+    "EXTRA:connector"
+   ],
+   "messages": [
+    "connector: expected 2, found 3 confident (extra part?)"
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/054.png",
+   "group": "structural",
+   "stratum": "contamination",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/055.png",
+   "group": "structural",
+   "stratum": "flipped_connector",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/056.png",
+   "group": "structural",
+   "stratum": "flipped_connector",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/057.png",
+   "group": "structural",
+   "stratum": "flipped_connector",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/061.png",
+   "group": "structural",
+   "stratum": "flipped_connector",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/068.png",
+   "group": "structural",
+   "stratum": "unknown_cable_color",
+   "verdict": "REVIEW",
+   "findings": [
+    "CABLE_COLOR_UNKNOWN:cable"
+   ],
+   "messages": [
+    "Cable colour could not be read (no colour wins clearly (best: red 15%, next 14%)); connector_2 needs a yellow cable. Check it by eye."
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/071.png",
+   "group": "structural",
+   "stratum": "unknown_cable_color",
+   "verdict": "REVIEW",
+   "findings": [
+    "CABLE_COLOR_UNKNOWN:cable"
+   ],
+   "messages": [
+    "Cable colour could not be read (no colour wins clearly (best: red 2%, next 1%)); connector_2 needs a yellow cable. Check it by eye."
+   ]
+  },
+  {
+   "image": "test/structural_anomalies/073.png",
+   "group": "structural",
+   "stratum": "open_lever",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/074.png",
+   "group": "structural",
+   "stratum": "open_lever",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/075.png",
+   "group": "structural",
+   "stratum": "open_lever",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  },
+  {
+   "image": "test/structural_anomalies/076.png",
+   "group": "structural",
+   "stratum": "open_lever",
+   "verdict": "PASS",
+   "findings": [],
+   "messages": []
+  }
+ ]
+}

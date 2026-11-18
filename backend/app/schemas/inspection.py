@@ -29,13 +29,18 @@ class Detection(BaseModel):
 
 
 class Finding(BaseModel):
-    code: str  # MISSING, EXTRA, UNCERTAIN_PART, UNCERTAIN_EXTRA, UNEXPECTED_CLASS
+    # Count rules: MISSING, EXTRA, UNCERTAIN_PART, UNCERTAIN_EXTRA, UNEXPECTED_CLASS.
+    # Detector artefacts: DUPLICATE_DETECTION. Class competition: COMPETING_CLASSES, CLASS_SPLIT.
+    # Splicing: CONNECTOR_TYPE_MISMATCH, CABLE_NOT_CONNECTED, CABLE_MISPLACED,
+    #           CABLE_COLOR_MISMATCH, CABLE_COLOR_UNKNOWN.
+    code: str
     status: Status  # FAIL or REVIEW: what this finding contributes
     class_name: str
     expected: int | None = None
     confident: int | None = None
     uncertain: int | None = None
-    message: str
+    message: str  # operator-readable
+    evidence: dict = Field(default_factory=dict)  # numbers behind the message (boxes, gaps, shares)
 
 
 class ImageInfo(BaseModel):

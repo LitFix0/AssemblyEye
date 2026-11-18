@@ -2,47 +2,49 @@
  "category": "screw_bag",
  "detector": "yolo:screw_bag_A_s42_best.pt@5ac8ab93847f imgsz=640 min_conf=0.1",
  "split": "dev",
+ "suppress": true,
+ "spec_version": "0.2-st04",
  "accept": 0.6,
  "review": 0.3,
  "groups": {
   "normal": {
    "PASS": 34,
-   "REVIEW": 1,
-   "FAIL": 2,
+   "REVIEW": 3,
+   "FAIL": 0,
    "n": 37
   },
   "logical": {
    "PASS": 1,
-   "REVIEW": 0,
-   "FAIL": 42,
+   "REVIEW": 17,
+   "FAIL": 25,
    "n": 43
   },
   "structural": {
    "PASS": 16,
-   "REVIEW": 5,
-   "FAIL": 5,
+   "REVIEW": 6,
+   "FAIL": 4,
    "n": 26
   }
  },
  "strata": {
   "good": {
    "PASS": 34,
-   "REVIEW": 1,
-   "FAIL": 2,
+   "REVIEW": 3,
+   "FAIL": 0,
    "n": 37,
    "group": "normal"
   },
   "screw_too_long": {
    "PASS": 0,
-   "REVIEW": 0,
-   "FAIL": 6,
+   "REVIEW": 5,
+   "FAIL": 1,
    "n": 6,
    "group": "logical"
   },
   "screw_too_short": {
    "PASS": 0,
-   "REVIEW": 0,
-   "FAIL": 6,
+   "REVIEW": 6,
+   "FAIL": 0,
    "n": 6,
    "group": "logical"
   },
@@ -104,15 +106,15 @@
   },
   "1_very_short_screw": {
    "PASS": 1,
-   "REVIEW": 0,
-   "FAIL": 4,
+   "REVIEW": 4,
+   "FAIL": 0,
    "n": 5,
    "group": "logical"
   },
   "2_very_short_screws": {
    "PASS": 0,
-   "REVIEW": 0,
-   "FAIL": 2,
+   "REVIEW": 2,
+   "FAIL": 0,
    "n": 2,
    "group": "logical"
   },
@@ -146,8 +148,8 @@
   },
   "bag_broken": {
    "PASS": 3,
-   "REVIEW": 1,
-   "FAIL": 1,
+   "REVIEW": 2,
+   "FAIL": 0,
    "n": 5,
    "group": "structural"
   },
@@ -179,86 +181,101 @@
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/009.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/013.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/014.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/019.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/030.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/035.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/036.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/037.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/039.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/040.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/045.png",
    "group": "normal",
    "stratum": "good",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
     "UNCERTAIN_EXTRA:screw_long",
-    "MISSING:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long: expected 1; 1 extra low-confidence detection(s) - needs human check",
+    "screw_long/screw_short: 1 confident, 1 low-confidence: enough candidates but the split is unclear: screw_long 1 + 1 low-confidence (expected 1); screw_short 0 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
@@ -266,93 +283,109 @@
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/048.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/056.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/064.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/066.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/070.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/071.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/077.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/081.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/082.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/083.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/091.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/092.png",
    "group": "normal",
    "stratum": "good",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
     "UNCERTAIN_EXTRA:screw_long",
-    "MISSING:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long: expected 1; 1 extra low-confidence detection(s) - needs human check",
+    "screw_long/screw_short: 1 confident, 1 low-confidence: enough candidates but the split is unclear: screw_long 1 + 1 low-confidence (expected 1); screw_short 0 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
@@ -360,63 +393,72 @@
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/095.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/096.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/097.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/099.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/103.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/106.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/108.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/112.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/113.png",
@@ -425,6 +467,9 @@
    "verdict": "REVIEW",
    "findings": [
     "UNCERTAIN_PART:screw_long"
+   ],
+   "messages": [
+    "screw_long: expected 1; only 0 confident, 1 low-confidence - needs human check"
    ]
   },
   {
@@ -432,14 +477,16 @@
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/good/117.png",
    "group": "normal",
    "stratum": "good",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/logical_anomalies/000.png",
@@ -449,116 +496,142 @@
    "findings": [
     "EXTRA:screw_long",
     "MISSING:screw_short"
+   ],
+   "messages": [
+    "screw_long: expected 1, found 3 confident (extra part?)",
+    "screw_short: expected 1, found 0 confident + 0 uncertain"
    ]
   },
   {
    "image": "test/logical_anomalies/002.png",
    "group": "logical",
    "stratum": "screw_too_long",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "EXTRA:screw_long",
-    "MISSING:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 2 (expected 1); screw_short 0 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/003.png",
    "group": "logical",
    "stratum": "screw_too_long",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "EXTRA:screw_long",
-    "MISSING:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 2 (expected 1); screw_short 0 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/004.png",
    "group": "logical",
    "stratum": "screw_too_long",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "EXTRA:screw_long",
-    "MISSING:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 2 (expected 1); screw_short 0 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/013.png",
    "group": "logical",
    "stratum": "screw_too_long",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "EXTRA:screw_long",
-    "MISSING:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 2 (expected 1); screw_short 0 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/020.png",
    "group": "logical",
    "stratum": "screw_too_long",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "EXTRA:screw_long",
-    "MISSING:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 2 + 1 low-confidence (expected 1); screw_short 0 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/024.png",
    "group": "logical",
    "stratum": "screw_too_short",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/029.png",
    "group": "logical",
    "stratum": "screw_too_short",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/031.png",
    "group": "logical",
    "stratum": "screw_too_short",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/032.png",
    "group": "logical",
    "stratum": "screw_too_short",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/034.png",
    "group": "logical",
    "stratum": "screw_too_short",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/036.png",
    "group": "logical",
    "stratum": "screw_too_short",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
@@ -568,6 +641,9 @@
    "verdict": "FAIL",
    "findings": [
     "EXTRA:screw_long"
+   ],
+   "messages": [
+    "screw_long: expected 1, found 2 confident (extra part?)"
    ]
   },
   {
@@ -577,6 +653,9 @@
    "verdict": "FAIL",
    "findings": [
     "EXTRA:washer"
+   ],
+   "messages": [
+    "washer: expected 2, found 3 confident (extra part?)"
    ]
   },
   {
@@ -586,6 +665,9 @@
    "verdict": "FAIL",
    "findings": [
     "EXTRA:screw_long"
+   ],
+   "messages": [
+    "screw_long: expected 1, found 2 confident (extra part?)"
    ]
   },
   {
@@ -595,6 +677,9 @@
    "verdict": "FAIL",
    "findings": [
     "EXTRA:nut"
+   ],
+   "messages": [
+    "nut: expected 2, found 3 confident (extra part?)"
    ]
   },
   {
@@ -604,6 +689,9 @@
    "verdict": "FAIL",
    "findings": [
     "EXTRA:washer"
+   ],
+   "messages": [
+    "washer: expected 2, found 3 confident (extra part?)"
    ]
   },
   {
@@ -613,6 +701,9 @@
    "verdict": "FAIL",
    "findings": [
     "EXTRA:screw_short"
+   ],
+   "messages": [
+    "screw_short: expected 1, found 2 confident (extra part?)"
    ]
   },
   {
@@ -622,6 +713,9 @@
    "verdict": "FAIL",
    "findings": [
     "EXTRA:nut"
+   ],
+   "messages": [
+    "nut: expected 2, found 3 confident (extra part?)"
    ]
   },
   {
@@ -631,6 +725,9 @@
    "verdict": "FAIL",
    "findings": [
     "EXTRA:screw_short"
+   ],
+   "messages": [
+    "screw_short: expected 1, found 2 confident (extra part?)"
    ]
   },
   {
@@ -640,6 +737,9 @@
    "verdict": "FAIL",
    "findings": [
     "MISSING:washer"
+   ],
+   "messages": [
+    "washer: expected 2, found 1 confident + 0 uncertain"
    ]
   },
   {
@@ -649,6 +749,9 @@
    "verdict": "FAIL",
    "findings": [
     "MISSING:nut"
+   ],
+   "messages": [
+    "nut: expected 2, found 1 confident + 0 uncertain"
    ]
   },
   {
@@ -658,6 +761,9 @@
    "verdict": "FAIL",
    "findings": [
     "MISSING:screw_long"
+   ],
+   "messages": [
+    "screw_long: expected 1, found 0 confident + 0 uncertain"
    ]
   },
   {
@@ -667,6 +773,9 @@
    "verdict": "FAIL",
    "findings": [
     "MISSING:screw_short"
+   ],
+   "messages": [
+    "screw_short: expected 1, found 0 confident + 0 uncertain"
    ]
   },
   {
@@ -676,6 +785,9 @@
    "verdict": "FAIL",
    "findings": [
     "MISSING:screw_short"
+   ],
+   "messages": [
+    "screw_short: expected 1, found 0 confident + 0 uncertain"
    ]
   },
   {
@@ -685,6 +797,9 @@
    "verdict": "FAIL",
    "findings": [
     "MISSING:nut"
+   ],
+   "messages": [
+    "nut: expected 2, found 1 confident + 0 uncertain"
    ]
   },
   {
@@ -694,6 +809,9 @@
    "verdict": "FAIL",
    "findings": [
     "MISSING:screw_long"
+   ],
+   "messages": [
+    "screw_long: expected 1, found 0 confident + 0 uncertain"
    ]
   },
   {
@@ -703,46 +821,57 @@
    "verdict": "FAIL",
    "findings": [
     "MISSING:washer"
+   ],
+   "messages": [
+    "washer: expected 2, found 1 confident + 0 uncertain"
    ]
   },
   {
    "image": "test/logical_anomalies/089.png",
    "group": "logical",
    "stratum": "1_very_short_screw",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/090.png",
    "group": "logical",
    "stratum": "2_very_short_screws",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/096.png",
    "group": "logical",
    "stratum": "1_very_short_screw",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/100.png",
    "group": "logical",
    "stratum": "1_very_short_screw",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
@@ -750,26 +879,33 @@
    "group": "logical",
    "stratum": "1_very_short_screw",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/logical_anomalies/105.png",
    "group": "logical",
    "stratum": "1_very_short_screw",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "EXTRA:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long/screw_short: right total (2) but wrong split: screw_long 0 (expected 1); screw_short 2 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
    "image": "test/logical_anomalies/106.png",
    "group": "logical",
    "stratum": "2_very_short_screws",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
-    "MISSING:screw_long",
-    "UNCERTAIN_EXTRA:screw_short"
+    "UNCERTAIN_EXTRA:screw_short",
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_short: expected 1; 1 extra low-confidence detection(s) - needs human check",
+    "screw_long/screw_short: 1 confident, 1 low-confidence: enough candidates but the split is unclear: screw_long 0 (expected 1); screw_short 1 + 1 low-confidence (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
@@ -780,6 +916,10 @@
    "findings": [
     "MISSING:nut",
     "EXTRA:washer"
+   ],
+   "messages": [
+    "nut: expected 2, found 1 confident + 0 uncertain",
+    "washer: expected 2, found 3 confident (extra part?)"
    ]
   },
   {
@@ -790,6 +930,10 @@
    "findings": [
     "EXTRA:nut",
     "MISSING:washer"
+   ],
+   "messages": [
+    "nut: expected 2, found 3 confident (extra part?)",
+    "washer: expected 2, found 1 confident + 0 uncertain"
    ]
   },
   {
@@ -800,6 +944,10 @@
    "findings": [
     "EXTRA:nut",
     "MISSING:washer"
+   ],
+   "messages": [
+    "nut: expected 2, found 4 confident (extra part?)",
+    "washer: expected 2, found 0 confident + 0 uncertain"
    ]
   },
   {
@@ -810,6 +958,10 @@
    "findings": [
     "MISSING:nut",
     "EXTRA:washer"
+   ],
+   "messages": [
+    "nut: expected 2, found 0 confident + 0 uncertain",
+    "washer: expected 2, found 4 confident (extra part?)"
    ]
   },
   {
@@ -820,6 +972,10 @@
    "findings": [
     "EXTRA:nut",
     "MISSING:washer"
+   ],
+   "messages": [
+    "nut: expected 2, found 4 confident (extra part?)",
+    "washer: expected 2, found 0 confident + 0 uncertain"
    ]
   },
   {
@@ -831,6 +987,11 @@
     "UNCERTAIN_PART:screw_long",
     "MISSING:nut",
     "EXTRA:washer"
+   ],
+   "messages": [
+    "screw_long: expected 1; only 0 confident, 1 low-confidence - needs human check",
+    "nut: expected 2, found 0 confident + 0 uncertain",
+    "washer: expected 2, found 4 confident (extra part?)"
    ]
   },
   {
@@ -841,6 +1002,10 @@
    "findings": [
     "MISSING:nut",
     "EXTRA:washer"
+   ],
+   "messages": [
+    "nut: expected 2, found 1 confident + 0 uncertain",
+    "washer: expected 2, found 3 confident (extra part?)"
    ]
   },
   {
@@ -851,6 +1016,10 @@
    "findings": [
     "EXTRA:nut",
     "MISSING:washer"
+   ],
+   "messages": [
+    "nut: expected 2, found 3 confident (extra part?)",
+    "washer: expected 2, found 1 confident + 0 uncertain"
    ]
   },
   {
@@ -858,16 +1027,21 @@
    "group": "structural",
    "stratum": "bag_broken",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/005.png",
    "group": "structural",
    "stratum": "bag_broken",
-   "verdict": "FAIL",
+   "verdict": "REVIEW",
    "findings": [
     "UNCERTAIN_EXTRA:screw_long",
-    "MISSING:screw_short"
+    "CLASS_SPLIT:screw_long/screw_short"
+   ],
+   "messages": [
+    "screw_long: expected 1; 1 extra low-confidence detection(s) - needs human check",
+    "screw_long/screw_short: 1 confident, 1 low-confidence: enough candidates but the split is unclear: screw_long 1 + 1 low-confidence (expected 1); screw_short 0 (expected 1). A part may be the wrong length or mis-classified. Check it by eye."
    ]
   },
   {
@@ -875,14 +1049,16 @@
    "group": "structural",
    "stratum": "bag_broken",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/013.png",
    "group": "structural",
    "stratum": "bag_broken",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/015.png",
@@ -892,6 +1068,10 @@
    "findings": [
     "UNCERTAIN_PART:screw_short",
     "UNCERTAIN_PART:washer"
+   ],
+   "messages": [
+    "screw_short: expected 1; only 0 confident, 1 low-confidence - needs human check",
+    "washer: expected 2; only 1 confident, 1 low-confidence - needs human check"
    ]
   },
   {
@@ -901,6 +1081,9 @@
    "verdict": "REVIEW",
    "findings": [
     "UNCERTAIN_PART:nut"
+   ],
+   "messages": [
+    "nut: expected 2; only 1 confident, 1 low-confidence - needs human check"
    ]
   },
   {
@@ -908,35 +1091,40 @@
    "group": "structural",
    "stratum": "part_broken",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/022.png",
    "group": "structural",
    "stratum": "part_broken",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/024.png",
    "group": "structural",
    "stratum": "part_broken",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/025.png",
    "group": "structural",
    "stratum": "part_broken",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/029.png",
    "group": "structural",
    "stratum": "part_broken",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/034.png",
@@ -945,6 +1133,9 @@
    "verdict": "REVIEW",
    "findings": [
     "UNCERTAIN_EXTRA:screw_long"
+   ],
+   "messages": [
+    "screw_long: expected 1; 1 extra low-confidence detection(s) - needs human check"
    ]
   },
   {
@@ -952,35 +1143,40 @@
    "group": "structural",
    "stratum": "part_broken",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/041.png",
    "group": "structural",
    "stratum": "color",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/046.png",
    "group": "structural",
    "stratum": "color",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/049.png",
    "group": "structural",
    "stratum": "color",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/054.png",
    "group": "structural",
    "stratum": "color",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/055.png",
@@ -990,6 +1186,10 @@
    "findings": [
     "EXTRA:nut",
     "MISSING:washer"
+   ],
+   "messages": [
+    "nut: expected 2, found 3 confident (extra part?)",
+    "washer: expected 2, found 1 confident + 0 uncertain"
    ]
   },
   {
@@ -997,7 +1197,8 @@
    "group": "structural",
    "stratum": "contamination",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/061.png",
@@ -1008,6 +1209,11 @@
     "UNCERTAIN_PART:screw_long",
     "UNCERTAIN_EXTRA:screw_short",
     "EXTRA:washer"
+   ],
+   "messages": [
+    "screw_long: expected 1; only 0 confident, 1 low-confidence - needs human check",
+    "screw_short: expected 1; 1 extra low-confidence detection(s) - needs human check",
+    "washer: expected 2, found 3 confident (extra part?)"
    ]
   },
   {
@@ -1017,6 +1223,9 @@
    "verdict": "REVIEW",
    "findings": [
     "UNCERTAIN_PART:screw_long"
+   ],
+   "messages": [
+    "screw_long: expected 1; only 0 confident, 1 low-confidence - needs human check"
    ]
   },
   {
@@ -1026,6 +1235,9 @@
    "verdict": "FAIL",
    "findings": [
     "EXTRA:washer"
+   ],
+   "messages": [
+    "washer: expected 2, found 3 confident (extra part?)"
    ]
   },
   {
@@ -1033,7 +1245,8 @@
    "group": "structural",
    "stratum": "contamination",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/073.png",
@@ -1043,6 +1256,10 @@
    "findings": [
     "UNCERTAIN_PART:screw_long",
     "UNCERTAIN_EXTRA:screw_short"
+   ],
+   "messages": [
+    "screw_long: expected 1; only 0 confident, 1 low-confidence - needs human check",
+    "screw_short: expected 1; 1 extra low-confidence detection(s) - needs human check"
    ]
   },
   {
@@ -1050,7 +1267,8 @@
    "group": "structural",
    "stratum": "contamination",
    "verdict": "PASS",
-   "findings": []
+   "findings": [],
+   "messages": []
   },
   {
    "image": "test/structural_anomalies/075.png",
@@ -1059,6 +1277,9 @@
    "verdict": "FAIL",
    "findings": [
     "EXTRA:washer"
+   ],
+   "messages": [
+    "washer: expected 2, found 3 confident (extra part?)"
    ]
   }
  ]

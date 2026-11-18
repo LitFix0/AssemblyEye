@@ -1,0 +1,43 @@
+product: splicing_connectors
+version: "0.2-st04"
+description: >
+  Two connectors of the same clamp count joined by one cable; cable colour must match the connector
+  type (yellow = 2, blue = 3, red = 5). ALL NUMBERS BELOW ARE UNTUNED PLACEHOLDERS:
+  - cable thresholds (accept 0.40 / review 0.20) come from the ST-03 count sweep on the 60 normal dev
+    images (cable confidence sits around 0.4-0.5; 57/60 exact at 0.4, 21/60 at 0.5). Not tuned further.
+  - end_tolerance 0.02 (about 38 px on a 1700x850 image) comes from the 44 annotated normals, where the
+    ground-truth cable end is at worst about 3 px short of its connector. Detector boxes are noisier.
+  - hue ranges and pixel floors are guesses. Check them with scripts/check_splicing_rules.py before
+    trusting any cable-colour FAIL.
+thresholds:
+  accept_conf: 0.60
+  review_conf: 0.30
+class_thresholds:
+  cable:
+    accept_conf: 0.40
+    review_conf: 0.20
+competing_classes:
+  - [connector_2, connector_3, connector_5]
+competing_iou: 0.7
+duplicate_iou: 0.7
+weak_duplicate_iou: 0.4
+splicing:
+  connector_classes: [connector_2, connector_3, connector_5]
+  cable_class: cable
+  n_connectors: 2
+  cable_colors:
+    connector_2: yellow
+    connector_3: blue
+    connector_5: red
+  end_tolerance: 0.02
+  min_cable_length: 0.18
+  color:
+    ranges:
+      yellow: [[20, 35]]
+      blue: [[100, 130]]
+      red: [[0, 8], [172, 179]]
+    min_saturation: 80
+    min_value: 50
+    min_pixels: 40
+    min_share: 0.5
+    confident_share: 0.7
