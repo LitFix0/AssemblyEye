@@ -52,3 +52,7 @@ reports/label_checks/
 reports/predictions/
 # API evidence files
 data/inspections/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/

@@ -147,7 +147,10 @@ def test_fail_beats_review(spec):
 def test_pipeline_output_format(spec, image_path):
     result, _ = run_inspection(image_path, spec, normal_parts(), "test")
     data = json.loads(result.model_dump_json())
-    assert set(data) == {"product", "spec_version", "status", "image", "detections", "findings", "detector"}
+    assert set(data) == {"product", "spec_version", "status", "image", "detections", "findings", "detector",
+                         "components"}
+    assert [(c["class_name"], c["expected"], c["confident"]) for c in data["components"]] == [
+        ("screw_long", 1, 1), ("screw_short", 1, 1), ("nut", 2, 2), ("washer", 2, 2)]
     assert data["status"] == "PASS"
     assert data["image"] == {"name": "synthetic.png", "width": 400, "height": 300}
     assert len(data["detections"]) == 6

@@ -73,6 +73,10 @@ def test_normal_screw_bag_passes_and_evidence_is_retrievable(make_client):
     assert body["result"]["status"] == "PASS" and body["result"]["findings"] == []
     assert body["result"]["product"] == "screw_bag" and body["result"]["detector"] == "fake:test-detector"
     assert body["result"]["image"]["name"] == "my part.png"
+    table = {c["class_name"]: (c["expected"], c["confident"], c["uncertain"]) for c in body["result"]["components"]}
+    assert table == {"screw_long": (1, 1, 0), "screw_short": (1, 1, 0), "nut": (2, 2, 0), "washer": (2, 2, 0)}
+    table = {c["class_name"]: (c["expected"], c["confident"], c["uncertain"]) for c in body["result"]["components"]}
+    assert table == {"screw_long": (1, 1, 0), "screw_short": (1, 1, 0), "nut": (2, 2, 0), "washer": (2, 2, 0)}
     assert set(body["timings_ms"]) == {"load", "detect", "total"}
     for kind in ("original", "annotated"):
         img = client.get(body["evidence"][f"{kind}_url"])

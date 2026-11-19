@@ -2,6 +2,7 @@ from app.core.image_io import LoadedImage, load_image
 from app.schemas.inspection import Detection, ImageInfo, InspectionResult
 from app.schemas.spec import ProductSpec
 from app.services.verification.engine import verify_product
+from app.services.verification.summary import component_table
 
 
 def run_inspection(image_path, spec: ProductSpec, detections: list[Detection],
@@ -22,5 +23,6 @@ def run_inspection(image_path, spec: ProductSpec, detections: list[Detection],
         detections=detections,
         findings=findings,
         detector=detector_name,
+        components=component_table(detections, spec),
     )
     return result, img

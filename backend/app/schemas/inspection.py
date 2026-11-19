@@ -42,6 +42,13 @@ class Finding(BaseModel):
     message: str  # operator-readable
     evidence: dict = Field(default_factory=dict)  # numbers behind the message (boxes, gaps, shares)
 
+class ComponentCount(BaseModel):
+    """Expected vs detected, for display. The verdict comes from the findings, not from this table."""
+    class_name: str
+    expected: int
+    confident: int  # detections at or above the class's accept threshold
+    uncertain: int  # between its review and accept thresholds
+
 
 class ImageInfo(BaseModel):
     name: str
@@ -57,3 +64,4 @@ class InspectionResult(BaseModel):
     detections: list[Detection]
     findings: list[Finding]
     detector: str
+    components: list[ComponentCount] = Field(default_factory=list)
