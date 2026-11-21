@@ -68,7 +68,7 @@ def resolve_duplicates(detections: list[Detection], spec: ProductSpec) -> tuple[
             evidence={"kept": _ev(twin), "dropped": _ev(d), "iou": round(iou(twin.bbox, d.bbox), 3)}))
     if spec.weak_duplicate_iou is not None:
         # A below-accept box sitting on a stronger box of its class is that object again, not a second
-        # object. Dropped without a finding: the object is still judged through the stronger box.
+        # object. Dropped without a finding: the object itself is still judged through the stronger box.
         for d in [k for k in kept if band_of(k, spec) == "uncertain"]:
             if any(k is not d and k.class_name == d.class_name and k.confidence > d.confidence
                    and iou(k.bbox, d.bbox) >= spec.weak_duplicate_iou for k in kept):
@@ -101,6 +101,18 @@ def resolve_competing(detections: list[Detection], group: list[str], spec: Produ
             evidence={"kept": _ev(rival), "dropped": _ev(d), "iou": round(iou(rival.bbox, d.bbox), 3)}))
     drop_ids = {id(d) for d in dropped}
     return [d for d in detections if id(d) not in drop_ids], findings
+
+
+def resolve_all(detections: list[Detection], spec: ProductSpec) -> tuple[list[Detection], list[Finding]]:
+    """The detection clean-up every verifier does before counting: duplicate boxes first, then one object
+    read as two classes of a competing group. Shared so the verdict and the display table count the same
+    detections. Splicing competes over its connector classes; other specs use competing_classes."""
+    dets, findings = resolve_duplicates(detections, spec)
+    groups = [list(spec.splicing.connector_classes)] if spec.splicing else spec.competing_classes
+    for group in groups:
+        dets, comp = resolve_competing(dets, group, spec, spec.competing_iou)
+        findings += comp
+    return dets, findings
 
 
 def _merge_class_splits(findings: list[Finding], spec: ProductSpec, confident: Counter,
@@ -153,10 +165,7 @@ def verify_counts(detections: list[Detection], spec: ProductSpec) -> tuple[Statu
     read as two classes of a group, and a right-total-wrong-split inside a group, both give REVIEW.
     Specs without competing_classes behave exactly as the original ST-01 rule.
     """
-    dets, findings = resolve_duplicates(detections, spec)
-    for group in spec.competing_classes:
-        dets, comp = resolve_competing(dets, group, spec, spec.competing_iou)
-        findings += comp
+    dets, findings = resolve_all(detections, spec)
 
     confident: Counter = Counter()
     uncertain: Counter = Counter()

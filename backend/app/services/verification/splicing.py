@@ -21,9 +21,7 @@ import math
 from app.schemas.inspection import BBox, Detection, Finding, Status
 from app.schemas.spec import ProductSpec
 from app.services.verification.color import read_cable_color
-from app.services.verification.count_rules import (band_of, count_finding, resolve_competing,
-                                                   resolve_duplicates, status_of)
-
+from app.services.verification.count_rules import band_of, count_finding, resolve_all, status_of
 
 def box_gap(a: BBox, b: BBox) -> float:
     """Shortest distance between two boxes in px; 0 if they touch or overlap."""
@@ -52,9 +50,8 @@ def verify_splicing(detections: list[Detection], spec: ProductSpec, image_bgr) -
     findings: list[Finding] = []
     known = set(rules.connector_classes) | {rules.cable_class}
 
-    dets, dup = resolve_duplicates(detections, spec)
-    dets, comp = resolve_competing(dets, list(rules.connector_classes), spec, spec.competing_iou)
-    findings += dup + comp
+    dets, cleanup = resolve_all(detections, spec)
+    findings += cleanup
 
     conf_conn = [d for d in dets if d.class_name in rules.connector_classes and band_of(d, spec) == "confident"]
     unc_conn = [d for d in dets if d.class_name in rules.connector_classes and band_of(d, spec) == "uncertain"]

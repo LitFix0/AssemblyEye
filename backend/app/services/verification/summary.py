@@ -1,11 +1,14 @@
-"""Expected-vs-detected table for display. Same confidence bands as the verification rules
-(band_of), so the table and the findings cannot disagree about what counts as confident."""
+"""Expected-vs-detected table for display. Same confidence bands (band_of) and the same duplicate /
+competing-class clean-up (resolve_all) as the verification rules, so the table counts exactly what the
+verdict counted."""
 from app.schemas.inspection import ComponentCount, Detection
 from app.schemas.spec import ProductSpec
-from app.services.verification.count_rules import band_of
+from app.services.verification.count_rules import band_of, resolve_all
 
 
 def component_table(detections: list[Detection], spec: ProductSpec) -> list[ComponentCount]:
+    detections, _ = resolve_all(detections, spec)
+
     def tally(classes: set[str]) -> tuple[int, int]:
         bands = [band_of(d, spec) for d in detections if d.class_name in classes]
         return bands.count("confident"), bands.count("uncertain")
