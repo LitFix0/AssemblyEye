@@ -1,4 +1,4 @@
-"""One inspection: store evidence, validate, detect, verify, annotate. No HTTP in here."""
+"""One inspection: store evidence, validate, detect, verify, annotate, record. No HTTP in here."""
 import re
 import shutil
 import time
@@ -7,6 +7,7 @@ from pathlib import Path
 from uuid import uuid4
 
 from app.core.image_io import ALLOWED_EXT, ImageValidationError, load_image, save_image
+from app.db.store import InspectionStore
 from app.evaluation.counts import suppress_cross_class
 from app.schemas.api import Evidence, InspectionResponse
 from app.services.pipeline import run_inspection
@@ -22,7 +23,7 @@ def safe_name(filename: str | None) -> str:
 
 
 def inspect_bytes(data: bytes, filename: str | None, product: str, registry: DetectorRegistry,
-                  data_dir: Path) -> InspectionResponse:
+                  data_dir: Path, store: InspectionStore) -> InspectionResponse:
     t0 = time.perf_counter()
     entry = registry.get(product)
     ext = Path(filename or "").suffix.lower()
@@ -52,8 +53,8 @@ def inspect_bytes(data: bytes, filename: str | None, product: str, registry: Det
                               annotated_url=f"/inspections/{iid}/annotated"),
             timings_ms={"load": round((t1 - t0) * 1000, 1), "detect": round((t2 - t1) * 1000, 1),
                         "total": round((time.perf_counter() - t0) * 1000, 1)})
-        (folder / "result.json").write_text(response.model_dump_json(indent=2), encoding="utf-8")
+        store.add(response)  # last step: a row exists only for an inspection whose images were saved
         return response
     except BaseException:
-        shutil.rmtree(folder, ignore_errors=True)  # no evidence folder for a request that failed
+        shutil.rmtree(folder, ignore_errors=True)  # no images left behind for a request that failed
         raise

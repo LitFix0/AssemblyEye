@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ApiRequestError, fetchProducts, inspectImage } from "./api";
+import History from "./components/History";
 import ResultView from "./components/ResultView";
 import { fileProblem } from "./format";
 import type { InspectionResponse, ProductInfo } from "./types";
@@ -11,6 +12,7 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [response, setResponse] = useState<InspectionResponse | null>(null);
+  const [tab, setTab] = useState<"inspect" | "history">("inspect");
 
   useEffect(() => {
     fetchProducts()
@@ -52,6 +54,15 @@ export default function App() {
       <h1>Assembly verification</h1>
       <p className="muted">Research prototype on public data. Not validated for production use.</p>
 
+      <nav className="tabs" aria-label="Sections">
+        <button type="button" className={tab === "inspect" ? "on" : ""} aria-pressed={tab === "inspect"} onClick={() => setTab("inspect")}>New inspection</button>
+        <button type="button" className={tab === "history" ? "on" : ""} aria-pressed={tab === "history"} onClick={() => setTab("history")}>History</button>
+      </nav>
+
+      {tab === "history" ? (
+        <History products={products} />
+      ) : (
+        <>
       <form onSubmit={submit} className="panel">
         <label>
           Product
@@ -74,6 +85,8 @@ export default function App() {
 
       {error && <p className="error" role="alert">{error}</p>}
       {response && <ResultView response={response} />}
+        </>
+      )}
     </main>
   );
 }

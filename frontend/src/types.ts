@@ -45,3 +45,22 @@ export interface ProductInfo {
   weights_present: boolean;
   detector_loaded: boolean;
 }
+
+export interface InspectionSummary {
+  inspection_id: string;
+  created_at: string;
+  product: string;
+  spec_version: string;
+  status: Status;
+  image_name: string;
+  detector: string;
+  finding_codes: string[];
+  total_ms: number;
+}
+
+export interface InspectionList {
+  items: InspectionSummary[];
+  total: number;
+  limit: number;
+  offset: number;
+}

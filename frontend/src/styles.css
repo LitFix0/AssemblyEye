@@ -50,3 +50,18 @@ table.components th, table.components td { text-align: left; padding: 6px 8px; b
 .row-check td:last-child { color: var(--review); font-weight: 600; }
 .row-ok td:last-child { color: var(--pass); }
 .meta { font-size: 0.8rem; word-break: break-word; }
+.tabs { display: flex; gap: 8px; margin: 16px 0 0; }
+.tabs button { background: var(--panel); color: var(--text); }
+.tabs button.on { background: var(--text); color: var(--bg); }
+button.secondary { background: var(--panel); color: var(--text); }
+input[type="text"], input[type="date"] { font: inherit; padding: 6px; }
+table.history { width: 100%; border-collapse: collapse; background: var(--panel); }
+table.history th, table.history td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.history .actions { white-space: nowrap; display: flex; gap: 6px; }
+.chip { font-weight: 700; padding: 1px 8px; border-radius: 10px; font-size: 0.8rem; }
+.chip-pass { background: var(--pass-bg); color: var(--pass); }
+.chip-review { background: var(--review-bg); color: var(--review); }
+.chip-fail { background: var(--fail-bg); color: var(--fail); }
+.pager { display: flex; gap: 8px; align-items: center; margin: 12px 0; }
+.detail { margin-top: 24px; border-top: 2px solid var(--line); padding-top: 8px; }
+.detail-head { display: flex; justify-content: space-between; align-items: center; }

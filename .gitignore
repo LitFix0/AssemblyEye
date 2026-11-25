@@ -56,3 +56,5 @@ data/inspections/
 # Frontend
 frontend/node_modules/
 frontend/dist/
+
+Add-Content .gitignore "`n# SQLite history`ndata/vav.db*"

@@ -2,7 +2,7 @@ from datetime import datetime
 
 from pydantic import BaseModel
 
-from app.schemas.inspection import InspectionResult
+from app.schemas.inspection import InspectionResult, Status
 
 
 class Evidence(BaseModel):
@@ -38,3 +38,23 @@ class ErrorBody(BaseModel):
 
 class ErrorResponse(BaseModel):
     error: ErrorBody
+
+
+class InspectionSummary(BaseModel):
+    """One row of the history list. The full result is fetched separately."""
+    inspection_id: str
+    created_at: datetime
+    product: str
+    spec_version: str
+    status: Status
+    image_name: str
+    detector: str
+    finding_codes: list[str]
+    total_ms: float
+
+
+class InspectionList(BaseModel):
+    items: list[InspectionSummary]
+    total: int  # rows matching the filters, ignoring limit/offset
+    limit: int
+    offset: int

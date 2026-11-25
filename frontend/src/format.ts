@@ -24,3 +24,15 @@ export function fileProblem(file: File, maxBytes = 25 * 1024 * 1024): string | n
   if (file.size > maxBytes) return "That file is larger than 25 MB.";
   return null;
 }
+
+/** Start of the given local calendar day ("YYYY-MM-DD" from a date input) as an ISO instant. */
+export function dayStartIso(day: string): string {
+  const [y, m, d] = day.split("-").map(Number);
+  return new Date(y, m - 1, d).toISOString();
+}
+
+/** Start of the NEXT local day: the exclusive upper bound that makes "until <day>" include that whole day. */
+export function nextDayStartIso(day: string): string {
+  const [y, m, d] = day.split("-").map(Number);
+  return new Date(y, m - 1, d + 1).toISOString();
+}

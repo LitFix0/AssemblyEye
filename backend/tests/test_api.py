@@ -42,7 +42,7 @@ def png(w=400, h=300, value=110) -> bytes:
 @pytest.fixture
 def make_client(tmp_path):
     def _make(dets=NORMAL_SCREW_BAG, factory=None):
-        settings = dataclasses.replace(load_settings(), data_dir=tmp_path / "inspections")
+        settings = dataclasses.replace(load_settings(), data_dir=tmp_path / "inspections", db_path=tmp_path / "test.db")
         fake = FakeDetector(dets)
         app = create_app(settings, factory or (lambda entry: fake))
         return TestClient(app, raise_server_exceptions=False), fake, settings
@@ -177,7 +177,7 @@ def test_client_filename_never_becomes_a_path(make_client):
     body = post(client, png(), "../../evil name.png").json()
     assert body["result"]["image"]["name"] == "evil name.png"
     stored = sorted(p.name for p in (settings.data_dir / body["inspection_id"]).iterdir())
-    assert stored == ["annotated.png", "original.png", "result.json"]  # fixed names, nothing from the client
+    assert stored == ["annotated.png", "original.png"]  # fixed names, nothing from the client
     assert not any(settings.data_dir.parent.glob("evil*"))
 
 

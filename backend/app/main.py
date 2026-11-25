@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from app.api.errors import install_handlers
 from app.api.routes import router
 from app.core.settings import Settings, load_settings
+from app.db.store import InspectionStore
 from app.services.registry import DetectorRegistry, default_factory
 
 
@@ -11,6 +12,7 @@ def create_app(settings: Settings | None = None, detector_factory=default_factor
     app = FastAPI(title="Visual Assembly Verification", version="0.1")
     app.state.settings = settings
     app.state.registry = DetectorRegistry(settings, detector_factory)
+    app.state.store = InspectionStore(settings.db_path)
     settings.data_dir.mkdir(parents=True, exist_ok=True)
     install_handlers(app)
     app.include_router(router)
